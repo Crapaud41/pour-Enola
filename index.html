@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon Livre</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="couverture.jpg" alt="Couverture du livre" class="cover" />
+    <div class="page-content" id="page-content">Chargement...</div>
+    
+    <div class="nav left" onclick="previousPage()">&#8592; Page précédente</div>
+    <div class="nav right" onclick="nextPage()">Page suivante &#8594;</div>
+  </div>
+
+  <script>
+    const pages = [
+      "Page 1 : Il était une fois...",
+      "Page 2 : Dans un monde où...",
+      "Page 3 : Le vent soufflait fort...",
+      "Page 4 : Fin. Merci pour tout."
+    ];
+    let currentPage = 0;
+
+    function updatePage() {
+      document.getElementById("page-content").innerText = pages[currentPage];
+    }
+
+    function nextPage() {
+      if (currentPage < pages.length - 1) {
+        currentPage++;
+        updatePage();
+      }
+    }
+
+    function previousPage() {
+      if (currentPage > 0) {
+        currentPage--;
+        updatePage();
+      }
+    }
+
+    window.onload = updatePage;
+  </script>
+</body>
+</html>
 
