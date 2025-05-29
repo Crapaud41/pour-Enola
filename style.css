@@ -17,8 +17,8 @@ body {
 }
 
 .cover {
-  transform: scale(2);
-  transform-origin: center;
+  width: 800px;
+  height: auto;
   border: 3px solid white;
   margin-bottom: 20px;
 }
