@@ -17,9 +17,10 @@ body {
 }
 
 .cover {
-  width: 400px;
-  height: auto;
-  object-fit: contain;
+  transform: scale(2);
+  transform-origin: center;
+  border: 3px solid white;
+  margin-bottom: 20px;
 }
 
 .page-content {
