@@ -35,7 +35,7 @@ body {
   transform: scale(1.02);
 }
 
-/* PAGE BLANCHE STYLE "VIEILLE PAGE" */
+/* PAGE STYLE "VIEILLE PAGE" */
 .page-blanche {
   background-color: #fdf6e3; /* beige papier vieilli */
   color: #222;
@@ -50,18 +50,25 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Pour placer le contenu du haut et bas */
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
-  border: 1px solid #ccc; /* bordure légère */
+  border: 1px solid #ccc;
 }
 
-/* NUMÉRO DE PAGE EN BAS */
+/* NUMÉRO DE PAGE AU-DESSUS DU TEXTE */
 .numero-page {
   font-size: 16px;
   color: #555;
   margin-top: auto;
-  padding-bottom: 10px;
+  padding-bottom: 0;
+}
+
+/* TEXTE FINAL TOUT EN BAS */
+.texte-final {
+  padding: 20px 0 30px;
+  font-size: 18px;
+  max-width: 90%;
 }
 
 
