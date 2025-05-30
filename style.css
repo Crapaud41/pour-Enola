@@ -21,7 +21,7 @@ body {
   align-items: center;
 }
 
-/* COUVERTURE */
+/* IMAGE DE COUVERTURE */
 .cover {
   width: 100%;
   height: auto;
@@ -50,9 +50,18 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; /* Pour placer le contenu du haut et bas */
   align-items: center;
   text-align: center;
-  border: 1px solid #ccc; /* bordure légère pour un effet papier */
+  border: 1px solid #ccc; /* bordure légère */
 }
+
+/* NUMÉRO DE PAGE EN BAS */
+.numero-page {
+  font-size: 16px;
+  color: #555;
+  margin-top: auto;
+  padding-bottom: 10px;
+}
+
 
