@@ -51,8 +51,9 @@ body {
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* 👈 aligner en haut */
+  justify-content: space-between;
   align-items: center;
   text-align: center;
 }
+
 
