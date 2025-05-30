@@ -1,13 +1,19 @@
-/* STYLE GLOBAL */
+/* STYLE GÉNÉRAL POUR TOUTES LES PAGES */
 body {
   margin: 0;
-  background-color: #007BFF;
+  background-color: #007BFF; /* bleu pour la couverture */
   font-family: 'Georgia', serif;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+/* STYLE SPÉCIFIQUE POUR LA PAGE 1 */
+body.livre {
+  background-color: #fdf6e3; /* beige style vieille page de livre */
+  color: black;
 }
 
 /* CONTENEUR CENTRAL */
@@ -21,7 +27,7 @@ body {
   align-items: center;
 }
 
-/* COUVERTURE */
+/* IMAGE DE COUVERTURE */
 .cover {
   width: 100%;
   height: auto;
@@ -35,7 +41,7 @@ body {
   transform: scale(1.02);
 }
 
-/* PAGE BLANCHE */
+/* PAGE BLANCHE (pour page1.html) */
 .page-blanche {
   background-color: white;
   color: black;
@@ -48,10 +54,9 @@ body {
   font-size: 18px;
   line-height: 1.6;
   box-sizing: border-box;
-
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; /* Titre en haut, texte en bas */
   align-items: center;
   text-align: center;
 }
