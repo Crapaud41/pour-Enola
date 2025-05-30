@@ -66,9 +66,6 @@ body {
 
 /* TEXTE FINAL TOUT EN BAS */
 .texte-final {
-  padding: 20px 0 30px;
+  padding: 60px 0 30px; /* ↑ plus d'espace en haut */
   font-size: 18px;
   max-width: 90%;
-}
-
-
