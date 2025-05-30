@@ -8,39 +8,7 @@
 </head>
 <body>
   <div class="container">
-<img src="couverture.jpg" alt="Couverture du livre" class="cover" />
-    
+    <img src="couverture.jpg" alt="Couverture du livre" class="cover" />
   </div>
-
-  <script>
-    const pages = [
-      "Page 1 : Il était une fois...",
-      "Page 2 : Dans un monde où...",
-      "Page 3 : Le vent soufflait fort...",
-      "Page 4 : Fin. Merci pour tout."
-    ];
-    let currentPage = 0;
-
-    function updatePage() {
-      document.getElementById("page-content").innerText = pages[currentPage];
-    }
-
-    function nextPage() {
-      if (currentPage < pages.length - 1) {
-        currentPage++;
-        updatePage();
-      }
-    }
-
-    function previousPage() {
-      if (currentPage > 0) {
-        currentPage--;
-        updatePage();
-      }
-    }
-
-    window.onload = updatePage;
-  </script>
 </body>
 </html>
-
