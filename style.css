@@ -7,13 +7,14 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  position: relative;
 }
 
 .container {
   text-align: center;
   max-width: 800px;
-  width: 90%;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .cover {
@@ -21,13 +22,14 @@ body {
   max-width: 800px;
   height: auto;
   border: 3px solid white;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   transition: transform 0.3s ease;
 }
 
 .cover:hover {
   transform: scale(1.02);
 }
+
 .page-blanche {
   background-color: white;
   color: black;
@@ -39,4 +41,5 @@ body {
   font-size: 18px;
   line-height: 1.6;
   box-sizing: border-box;
+  margin: 0 auto;
 }
