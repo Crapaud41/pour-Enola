@@ -1,19 +1,13 @@
 /* STYLE GÉNÉRAL POUR TOUTES LES PAGES */
 body {
   margin: 0;
-  background-color: #007BFF; /* bleu pour la couverture */
+  background-color: #007BFF; /* fond bleu */
   font-family: 'Georgia', serif;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-
-/* STYLE SPÉCIFIQUE POUR LA PAGE 1 */
-body.livre {
-  background-color: #fdf6e3; /* beige style vieille page de livre */
-  color: black;
 }
 
 /* CONTENEUR CENTRAL */
@@ -27,7 +21,7 @@ body.livre {
   align-items: center;
 }
 
-/* IMAGE DE COUVERTURE */
+/* COUVERTURE */
 .cover {
   width: 100%;
   height: auto;
@@ -41,24 +35,24 @@ body.livre {
   transform: scale(1.02);
 }
 
-/* PAGE BLANCHE (pour page1.html) */
+/* PAGE BLANCHE STYLE "VIEILLE PAGE" */
 .page-blanche {
-  background-color: white;
-  color: black;
+  background-color: #fdf6e3; /* beige papier vieilli */
+  color: #222;
   padding: 40px;
   border-radius: 10px;
   width: 100%;
   max-width: 800px;
   height: 100%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
   font-size: 18px;
   line-height: 1.6;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Titre en haut, texte en bas */
+  justify-content: space-between;
   align-items: center;
   text-align: center;
+  border: 1px solid #ccc; /* bordure légère pour un effet papier */
 }
-
 
