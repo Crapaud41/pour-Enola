@@ -60,14 +60,14 @@ body {
 .numero-page {
   font-size: 16px;
   color: #555;
-  margin-top: auto;
-  padding-bottom: 5px; /* quasiment au bord */
+  padding-bottom: 10px; /* petit espace avec le bas */
 }
 
 
 /* TEXTE FINAL TOUT EN BAS */
 .texte-final {
-  margin-bottom: 10px; /* rapproché du chiffre */
+  margin-top: auto; /* pousse vers le bas */
+  margin-bottom: 10px; /* très proche du chiffre */
   font-size: 18px;
   max-width: 90%;
-}
+  text-align: center;
