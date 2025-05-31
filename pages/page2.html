@@ -10,14 +10,22 @@
       display: flex;
       justify-content: center;
       position: relative;
+      gap: 40px;
     }
 
     .trait-central {
+      position: absolute;
+      left: 50%;
+      top: calc(60px + 24px + 20px); /* padding top + h1 height + espace avant lignes */
+      transform: translateX(-50%);
       width: 2px;
+      height: calc(24px * 23); /* 23 lignes de Page 3 à Page 25 */
       background-color: #999;
-      height: calc(43px * 23); /* 23 lignes visibles */
-      margin: 0 40px;
-      margin-top: 6px;
+      z-index: 0;
+    }
+
+    body.dark-mode .trait-central {
+      background-color: #666;
     }
   </style>
 </head>
@@ -64,7 +72,7 @@
           <p><span>Page 25</span></p>
         </div>
 
-        <!-- Trait central -->
+        <!-- Trait central bien positionné -->
         <div class="trait-central"></div>
 
         <!-- Colonne droite -->
