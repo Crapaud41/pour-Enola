@@ -43,7 +43,7 @@ body.dark-mode .page-blanche {
   width: 90%;
 }
 
-/* Couverture */
+/* Image de couverture */
 .cover-container {
   display: flex;
   justify-content: center;
@@ -51,34 +51,23 @@ body.dark-mode .page-blanche {
   height: 100vh;
   overflow: hidden;
   position: relative;
-  perspective: 1200px;
+  width: 100%;
 }
 
 .cover {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  border: 4px solid white;
+  height: 100vh;
+  width: auto;
+  max-width: none;
+  border: 3px solid white;
   border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
   transition: transform 1s ease-in-out;
   transform-origin: left center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  cursor: pointer;
 }
 
 .cover-container.animate .cover {
-  animation: slideCover 1s forwards;
-}
-
-@keyframes slideCover {
-  0% {
-    transform: rotateY(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: rotateY(-90deg) translateX(100%);
-    opacity: 0;
-  }
+  transform: perspective(1000px) rotateY(-100deg);
 }
 
 /* Page blanche */
@@ -263,4 +252,3 @@ body.dark-mode .page-blanche {
   z-index: 999;
   transition: width 0.3s ease;
 }
-
