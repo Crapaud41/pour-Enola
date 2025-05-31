@@ -6,13 +6,15 @@
   <title>Chapitre 2</title>
   <link rel="stylesheet" href="../style.css" />
 </head>
-<body>
+<body style="overflow: hidden;">
   <button id="toggle-dark">Mode nuit</button>
   <div class="menu-flottant">
     <a href="../index.html">Accueil</a>
     <a href="page1.html">Page 1</a>
-    <a href="page2.html">Sommaire</a>
+    <a href="page48.html">Dernière page</a>
   </div>
+  <div class="progress-bar" id="progress-bar"></div>
+
   <div class="container">
     <div class="page-blanche page-sommaire">
 
@@ -31,42 +33,43 @@
           <p><span>Sa douceur</span><span class="page-num">Page 11</span></p>
           <p><span>Ma reconnaissance</span><span class="page-num">Page 12</span></p>
           <p><span>Lettre à Enola</span><span class="page-num">Page 13</span></p>
-          <p><span></span><span class="page-num">Page 14</span></p>
-          <p><span></span><span class="page-num">Page 15</span></p>
-          <p><span></span><span class="page-num">Page 16</span></p>
-          <p><span></span><span class="page-num">Page 17</span></p>
-          <p><span></span><span class="page-num">Page 18</span></p>
-          <p><span></span><span class="page-num">Page 19</span></p>
-          <p><span></span><span class="page-num">Page 20</span></p>
-          <p><span></span><span class="page-num">Page 21</span></p>
-          <p><span></span><span class="page-num">Page 22</span></p>
-          <p><span></span><span class="page-num">Page 23</span></p>
-          <p><span></span><span class="page-num">Page 24</span></p>
-          <p><span></span><span class="page-num">Page 25</span></p>
+          <p><span>Page 14</span></p>
+          <p><span>Page 15</span></p>
+          <p><span>Page 16</span></p>
+          <p><span>Page 17</span></p>
+          <p><span>Page 18</span></p>
+          <p><span>Page 19</span></p>
+          <p><span>Page 20</span></p>
+          <p><span>Page 21</span></p>
+          <p><span>Page 22</span></p>
+          <p><span>Page 23</span></p>
+          <p><span>Page 24</span></p>
+          <p><span>Page 25</span></p>
         </div>
+
         <div class="sommaire-droite">
-          <p><span></span><span class="page-num">Page 26</span></p>
-          <p><span></span><span class="page-num">Page 27</span></p>
-          <p><span></span><span class="page-num">Page 28</span></p>
-          <p><span></span><span class="page-num">Page 29</span></p>
-          <p><span></span><span class="page-num">Page 30</span></p>
-          <p><span></span><span class="page-num">Page 31</span></p>
-          <p><span></span><span class="page-num">Page 32</span></p>
-          <p><span></span><span class="page-num">Page 33</span></p>
-          <p><span></span><span class="page-num">Page 34</span></p>
-          <p><span></span><span class="page-num">Page 35</span></p>
-          <p><span></span><span class="page-num">Page 36</span></p>
-          <p><span></span><span class="page-num">Page 37</span></p>
-          <p><span></span><span class="page-num">Page 38</span></p>
-          <p><span></span><span class="page-num">Page 39</span></p>
-          <p><span></span><span class="page-num">Page 40</span></p>
-          <p><span></span><span class="page-num">Page 41</span></p>
-          <p><span></span><span class="page-num">Page 42</span></p>
-          <p><span></span><span class="page-num">Page 43</span></p>
-          <p><span></span><span class="page-num">Page 44</span></p>
-          <p><span></span><span class="page-num">Page 45</span></p>
-          <p><span></span><span class="page-num">Page 46</span></p>
-          <p><span></span><span class="page-num">Page 47</span></p>
+          <p><span>Page 26</span></p>
+          <p><span>Page 27</span></p>
+          <p><span>Page 28</span></p>
+          <p><span>Page 29</span></p>
+          <p><span>Page 30</span></p>
+          <p><span>Page 31</span></p>
+          <p><span>Page 32</span></p>
+          <p><span>Page 33</span></p>
+          <p><span>Page 34</span></p>
+          <p><span>Page 35</span></p>
+          <p><span>Page 36</span></p>
+          <p><span>Page 37</span></p>
+          <p><span>Page 38</span></p>
+          <p><span>Page 39</span></p>
+          <p><span>Page 40</span></p>
+          <p><span>Page 41</span></p>
+          <p><span>Page 42</span></p>
+          <p><span>Page 43</span></p>
+          <p><span>Page 44</span></p>
+          <p><span>Page 45</span></p>
+          <p><span>Page 46</span></p>
+          <p><span>Page 47</span></p>
           <p><span>Sans titre</span><span class="page-num">Page 48</span></p>
         </div>
       </div>
@@ -75,28 +78,13 @@
 
       <a href="page1.html" class="fleche-gauche">&#8592;</a>
       <a href="page3.html" class="fleche-droite">&#8594;</a>
-
     </div>
   </div>
 
-  <div class="progress-bar" id="progressBar"></div>
-
   <script>
-    // Barre de progression
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.body.scrollHeight - window.innerHeight;
-      const progress = (scrollTop / docHeight) * 100;
-      document.getElementById('progressBar').style.width = progress + '%';
-    });
-
-    // Mode nuit
-    document.getElementById('toggle-dark').addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
-
-    // Transition de page
+    // Effet de transition entre les pages
     const links = document.querySelectorAll('.fleche-gauche, .fleche-droite');
+
     links.forEach(link => {
       link.addEventListener('click', function (e) {
         e.preventDefault();
@@ -106,6 +94,20 @@
           window.location.href = target;
         }, 600);
       });
+    });
+
+    // Barre de progression dynamique
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (scrollTop / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = progress + '%';
+    });
+
+    // Mode nuit
+    const toggle = document.getElementById('toggle-dark');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
     });
   </script>
 </body>
