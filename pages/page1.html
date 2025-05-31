@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapitre 1</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="page-blanche">
 
+      <!-- Titre -->
+      <h1>Présentation</h1>
+
+      <!-- Image centrée -->
+      <img
+        src="photo.jpg"
+        alt="Photo d'Enola"
+        style="width: 400px; height: auto; border-radius: 10px; margin: 40px 0 80px;"
+      />
+
+      <!-- Texte -->
+      <div class="texte-final">
+        <p>
+          Il y a des rencontres qui changent une vie. Enola en fait partie.
+          Depuis 7 ans, elle est mon pilier, mon ange gardien, celle qui
+          m'a tendu la main quand j'en avais le plus besoin. Chaque mot ici
+          est une trace de l’amour que j’ai pour mon amour d'Enola.
+        </p>
+      </div>
+
+      <!-- Numéro de page -->
+      <div class="numero-page">1</div>
+
+      <!-- Flèches de navigation -->
+      <a href="index.html" class="fleche-gauche">&#8592;</a>
+      <a href="page2.html" class="fleche-droite">&#8594;</a>
+
+    </div>
+  </div>
+
+  <!-- Script pour effet de page tournée -->
+  <script>
+    const links = document.querySelectorAll('.fleche-gauche, .fleche-droite');
+
+    links.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault(); // Empêche le changement de page immédiat
+        const target = this.href;
+        document.querySelector('.page-blanche').classList.add('page-transition');
+
+        setTimeout(() => {
+          window.location.href = target;
+        }, 600); // Correspond à la durée de l'animation
+      });
+    });
+  </script>
+</body>
+</html>
