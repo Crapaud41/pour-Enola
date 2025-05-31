@@ -48,6 +48,18 @@ body {
   position: relative;
 }
 
+/* Trait vertical centré (pli de cahier) */
+.page-blanche::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: rgba(0, 0, 0, 0.2); /* discret */
+  transform: translateX(-50%);
+}
+
 .page-blanche h1 {
   margin-top: 0;
   margin-bottom: 20px;
