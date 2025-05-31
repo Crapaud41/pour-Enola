@@ -48,6 +48,7 @@ body.dark-mode {
   background: rgba(0, 0, 0, 0.7);
 }
 
+/* Conteneur de page */
 .page-blanche {
   max-width: 800px;
   margin: 80px auto;
@@ -60,24 +61,27 @@ body.dark-mode {
   transition: all 0.6s ease;
 }
 
+/* Animation de transition */
 .page-transition {
   opacity: 0;
   transform: scale(0.96);
   transition: all 0.6s ease;
 }
 
+/* Titre dans le sommaire */
 .page-sommaire h1 {
   text-align: center;
   margin-bottom: 40px;
 }
 
+/* Texte général */
 .texte-final {
   font-size: 16px;
   line-height: 1.6;
   text-align: justify;
 }
 
-/* Sommaire disposition */
+/* Disposition du sommaire */
 .texte-final {
   display: flex;
   justify-content: center;
@@ -85,6 +89,7 @@ body.dark-mode {
   gap: 40px;
 }
 
+/* Colonnes du sommaire */
 .sommaire-gauche,
 .sommaire-droite {
   display: flex;
@@ -101,16 +106,26 @@ body.dark-mode {
   font-size: 16px;
 }
 
+/* Numéro de page dans le sommaire */
 .page-num {
   margin-left: 10px;
   color: #999;
 }
 
+/* Trait central du sommaire */
 .trait-central {
+  position: absolute;
+  left: 50%;
+  top: calc(84px + 66px); /* marge haut page + h1 + espace avant "Page 3" */
+  transform: translateX(-50%);
   width: 2px;
+  height: calc(23 * 24px); /* 23 lignes à 24px de haut (approx) */
   background-color: #999;
-  height: calc(43px * 23); /* Ajusté pour correspondre aux 23 lignes de gauche */
-  margin-top: 6px;
+  z-index: 0;
+}
+
+.dark-mode .trait-central {
+  background-color: #666;
 }
 
 /* Bouton mode nuit */
@@ -184,7 +199,7 @@ body.dark-mode {
   color: #fff;
 }
 
-/* Couverture (page d'accueil) */
+/* Page d'accueil - couverture */
 .cover-container {
   display: flex;
   justify-content: center;
