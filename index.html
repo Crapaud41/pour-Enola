@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pour Enola</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #1F75FE, #358CFE, #1F75FE);
+      background-size: 400% 400%;
+      animation: gradientShift 20s ease infinite;
+      height: 100vh;
+      overflow: hidden;
+      color: white;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-align: center;
+    }
+
+    .cover {
+      border: 3px solid white;
+      max-width: 300px;
+      width: 90%;
+      box-shadow: 0 0 25px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      margin-top: 2vh;
+      font-size: 2em;
+      font-weight: normal;
+      letter-spacing: 1px;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 2vh;
+      font-size: 1em;
+      opacity: 0.85;
+    }
+  </style>
 </head>
 <body>
-  <!-- Bouton mode nuit -->
-  <button id="toggle-dark" aria-label="Activer ou désactiver le mode nuit">🌙</button>
-
-  <!-- Menu de navigation rapide -->
-  <div class="menu-flottant">
-    <a href="index.html">Accueil</a>
-    <a href="pages/page2.html">Sommaire</a>
-    <a href="pages/page48.html">Dernière page</a>
+  <div class="container">
+    <img src="couverture.jpg" alt="Couverture" class="cover">
+    <h1>Un livre écrit pour Enola</h1>
+    <div class="footer">GuiGui</div>
   </div>
-
-  <!-- Couverture cliquable -->
-  <div class="cover-container" id="coverContainer">
-    <img src="couverture.jpg" alt="Couverture" class="cover" />
-  </div>
-
-  <!-- Script JS -->
-  <script>
-    // Transition vers la première page
-    const cover = document.getElementById('coverContainer');
-    cover.addEventListener('click', () => {
-      cover.classList.add('page-transition');
-      setTimeout(() => {
-        window.location.href = "pages/page1.html";
-      }, 600);
-    });
-
-    // Mode nuit
-    document.getElementById('toggle-dark').addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
-  </script>
 </body>
 </html>
-
