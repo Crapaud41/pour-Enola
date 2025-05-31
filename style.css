@@ -128,8 +128,8 @@ body.dark-mode .page-blanche {
 .page-sommaire::before {
   content: '';
   position: absolute;
-  top: 110px;
-  bottom: 120px;
+  top: 110px; /* Aligné avec Portrait d'Enola */
+  bottom: 100px; /* S’arrête à Page 25 */
   left: 50%;
   width: 1px;
   background-color: rgba(0, 0, 0, 0.2);
