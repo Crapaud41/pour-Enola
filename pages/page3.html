@@ -6,13 +6,11 @@
   <title>Portrait d'Enola</title>
   <link rel="stylesheet" href="../style.css" />
   <style>
-    .portrait-contenu {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      flex-grow: 1;
-      height: 100%;
+    .portrait-titre {
+      font-family: 'Great Vibes', cursive;
+      font-size: 36px;
+      margin-bottom: 40px;
+      margin-top: 20px;
       text-align: center;
     }
 
@@ -20,7 +18,7 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 40px;
+      gap: 60px;
     }
 
     .portrait-colonne {
@@ -33,7 +31,7 @@
       display: flex;
       gap: 10px;
       font-size: 16px;
-      margin: 2px 0;
+      margin: 3px 0;
     }
 
     .portrait-label {
@@ -47,13 +45,12 @@
       text-align: left;
     }
 
-    h1 {
-      margin-bottom: 30px;
-    }
-
     .numero-page {
       position: absolute;
       bottom: 20px;
+      font-size: 16px;
+      color: #555;
+      z-index: 1;
     }
 
     .fleche-gauche, .fleche-droite {
@@ -63,55 +60,57 @@
 </head>
 <body>
   <div class="page-blanche">
-    <div class="portrait-contenu">
-      <h1>Portrait d'Enola</h1>
-      <div class="portrait-liste">
-        <div class="portrait-colonne">
-          <div class="portrait-item"><div class="portrait-label">Prénom</div><div class="portrait-valeur">Enola</div></div>
-          <div class="portrait-item"><div class="portrait-label">Nom</div><div class="portrait-valeur">Philippe</div></div>
-          <div class="portrait-item"><div class="portrait-label">Surnom</div><div class="portrait-valeur">Nono, Mon petit ange</div></div>
-          <div class="portrait-item"><div class="portrait-label">Date de naissance</div><div class="portrait-valeur">23/05/1999</div></div>
-          <div class="portrait-item"><div class="portrait-label">Âge</div><div class="portrait-valeur">25 ans</div></div>
-          <div class="portrait-item"><div class="portrait-label">Couleur préférée</div><div class="portrait-valeur">Bleu</div></div>
-          <div class="portrait-item"><div class="portrait-label">Plat préféré</div><div class="portrait-valeur">À COMPLÉTER</div></div>
-          <div class="portrait-item"><div class="portrait-label">Yeux</div><div class="portrait-valeur">Bleu Gris</div></div>
-          <div class="portrait-item"><div class="portrait-label">Cheveux</div><div class="portrait-valeur">Marron</div></div>
-          <div class="portrait-item"><div class="portrait-label">Taille</div><div class="portrait-valeur">1 Mètre 55</div></div>
-          <div class="portrait-item"><div class="portrait-label">Poids</div><div class="portrait-valeur">50 Kilos</div></div>
-          <div class="portrait-item"><div class="portrait-label">Pointure</div><div class="portrait-valeur">À COMPLÉTER</div></div>
-          <div class="portrait-item"><div class="portrait-label">T-shirt</div><div class="portrait-valeur">À COMPLÉTER</div></div>
-          <div class="portrait-item"><div class="portrait-label">Pantalon</div><div class="portrait-valeur">À COMPLÉTER</div></div>
-          <div class="portrait-item"><div class="portrait-label">Groupe sanguin</div><div class="portrait-valeur">À COMPLÉTER</div></div>
-        </div>
-        <div class="portrait-colonne">
-          <div class="portrait-item"><div class="portrait-label">Musique</div><div class="portrait-valeur">À COMPLÉTER</div></div>
-          <div class="portrait-item"><div class="portrait-label">Bonbon</div><div class="portrait-valeur">À COMPLÉTER</div></div>
-          <div class="portrait-item"><div class="portrait-label">Signe astro</div><div class="portrait-valeur">Gémeaux</div></div>
-          <div class="portrait-item"><div class="portrait-label">Signe chinois</div><div class="portrait-valeur">Lapin</div></div>
-          <div class="portrait-item"><div class="portrait-label">Animal</div><div class="portrait-valeur">Murphy (son chat)</div></div>
-          <div class="portrait-item"><div class="portrait-label">Fleur</div><div class="portrait-valeur">À COMPLÉTER</div></div>
-          <div class="portrait-item"><div class="portrait-label">Parfum</div><div class="portrait-valeur">À COMPLÉTER</div></div>
-          <div class="portrait-item"><div class="portrait-label">Film</div><div class="portrait-valeur">À COMPLÉTER</div></div>
-          <div class="portrait-item"><div class="portrait-label">Série</div><div class="portrait-valeur">À COMPLÉTER</div></div>
-          <div class="portrait-item"><div class="portrait-label">Unique pour moi</div><div class="portrait-valeur">Son visage</div></div>
-          <div class="portrait-item"><div class="portrait-label">Phobie</div><div class="portrait-valeur">À COMPLÉTER</div></div>
-          <div class="portrait-item"><div class="portrait-label">Bonheur</div><div class="portrait-valeur">Nos appels</div></div>
-          <div class="portrait-item"><div class="portrait-label">Emoji</div><div class="portrait-valeur">♥</div></div>
-          <div class="portrait-item"><div class="portrait-label">Boisson</div><div class="portrait-valeur">À COMPLÉTER</div></div>
-          <div class="portrait-item"><div class="portrait-label">Alcool</div><div class="portrait-valeur">Desperados - Rhum</div></div>
-          <div class="portrait-item"><div class="portrait-label">Fruit</div><div class="portrait-valeur">À COMPLÉTER</div></div>
-          <div class="portrait-item"><div class="portrait-label">Dessert</div><div class="portrait-valeur">À COMPLÉTER</div></div>
-          <div class="portrait-item"><div class="portrait-label">Qualité</div><div class="portrait-valeur">Son écoute</div></div>
-          <div class="portrait-item"><div class="portrait-label">Pourquoi elle</div><div class="portrait-valeur">Enola m’a sauvé, je l’aime</div></div>
-        </div>
+    <!-- Titre en haut -->
+    <h1 class="portrait-titre">Portrait d'Enola</h1>
+
+    <!-- Contenu en 2 colonnes -->
+    <div class="portrait-liste">
+      <div class="portrait-colonne">
+        <div class="portrait-item"><div class="portrait-label">Prénom</div><div class="portrait-valeur">Enola</div></div>
+        <div class="portrait-item"><div class="portrait-label">Nom</div><div class="portrait-valeur">Philippe</div></div>
+        <div class="portrait-item"><div class="portrait-label">Surnom</div><div class="portrait-valeur">Nono, Mon petit ange</div></div>
+        <div class="portrait-item"><div class="portrait-label">Date de naissance</div><div class="portrait-valeur">23/05/1999</div></div>
+        <div class="portrait-item"><div class="portrait-label">Âge</div><div class="portrait-valeur">25 ans</div></div>
+        <div class="portrait-item"><div class="portrait-label">Couleur préférée</div><div class="portrait-valeur">Bleu</div></div>
+        <div class="portrait-item"><div class="portrait-label">Plat préféré</div><div class="portrait-valeur">À COMPLÉTER</div></div>
+        <div class="portrait-item"><div class="portrait-label">Yeux</div><div class="portrait-valeur">Bleu Gris</div></div>
+        <div class="portrait-item"><div class="portrait-label">Cheveux</div><div class="portrait-valeur">Marron</div></div>
+        <div class="portrait-item"><div class="portrait-label">Taille</div><div class="portrait-valeur">1 Mètre 55</div></div>
+        <div class="portrait-item"><div class="portrait-label">Poids</div><div class="portrait-valeur">50 Kilos</div></div>
+        <div class="portrait-item"><div class="portrait-label">Pointure</div><div class="portrait-valeur">À COMPLÉTER</div></div>
+        <div class="portrait-item"><div class="portrait-label">T-shirt</div><div class="portrait-valeur">À COMPLÉTER</div></div>
+        <div class="portrait-item"><div class="portrait-label">Pantalon</div><div class="portrait-valeur">À COMPLÉTER</div></div>
+        <div class="portrait-item"><div class="portrait-label">Groupe sanguin</div><div class="portrait-valeur">À COMPLÉTER</div></div>
+      </div>
+      <div class="portrait-colonne">
+        <div class="portrait-item"><div class="portrait-label">Musique</div><div class="portrait-valeur">À COMPLÉTER</div></div>
+        <div class="portrait-item"><div class="portrait-label">Bonbon</div><div class="portrait-valeur">À COMPLÉTER</div></div>
+        <div class="portrait-item"><div class="portrait-label">Signe astro</div><div class="portrait-valeur">Gémeaux</div></div>
+        <div class="portrait-item"><div class="portrait-label">Signe chinois</div><div class="portrait-valeur">Lapin</div></div>
+        <div class="portrait-item"><div class="portrait-label">Animal</div><div class="portrait-valeur">Murphy (son chat)</div></div>
+        <div class="portrait-item"><div class="portrait-label">Fleur</div><div class="portrait-valeur">À COMPLÉTER</div></div>
+        <div class="portrait-item"><div class="portrait-label">Parfum</div><div class="portrait-valeur">À COMPLÉTER</div></div>
+        <div class="portrait-item"><div class="portrait-label">Film</div><div class="portrait-valeur">À COMPLÉTER</div></div>
+        <div class="portrait-item"><div class="portrait-label">Série</div><div class="portrait-valeur">À COMPLÉTER</div></div>
+        <div class="portrait-item"><div class="portrait-label">Unique pour moi</div><div class="portrait-valeur">Son visage</div></div>
+        <div class="portrait-item"><div class="portrait-label">Phobie</div><div class="portrait-valeur">À COMPLÉTER</div></div>
+        <div class="portrait-item"><div class="portrait-label">Bonheur</div><div class="portrait-valeur">Nos appels</div></div>
+        <div class="portrait-item"><div class="portrait-label">Emoji</div><div class="portrait-valeur">♥</div></div>
+        <div class="portrait-item"><div class="portrait-label">Boisson</div><div class="portrait-valeur">À COMPLÉTER</div></div>
+        <div class="portrait-item"><div class="portrait-label">Alcool</div><div class="portrait-valeur">Desperados - Rhum</div></div>
+        <div class="portrait-item"><div class="portrait-label">Fruit</div><div class="portrait-valeur">À COMPLÉTER</div></div>
+        <div class="portrait-item"><div class="portrait-label">Dessert</div><div class="portrait-valeur">À COMPLÉTER</div></div>
+        <div class="portrait-item"><div class="portrait-label">Qualité</div><div class="portrait-valeur">Son écoute</div></div>
+        <div class="portrait-item"><div class="portrait-label">Pourquoi elle</div><div class="portrait-valeur">Enola m’a sauvé, je l’aime</div></div>
       </div>
     </div>
 
-    <!-- Navigation -->
+    <!-- Flèches navigation -->
     <a href="page2.html" class="fleche-gauche">←</a>
     <a href="page4.html" class="fleche-droite">→</a>
+
+    <!-- Numéro de page -->
     <div class="numero-page">Page 3</div>
   </div>
 </body>
 </html>
-
