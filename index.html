@@ -18,27 +18,26 @@
   </div>
 
   <!-- Couverture cliquable -->
-  <div class="cover-container" id="coverContainer">
+  <div class="cover-container page-blanche" id="coverContainer">
     <img src="couverture.jpg" alt="Couverture" class="cover" />
   </div>
 
-  <!-- Script d’animation couverture -->
+  <!-- Script pour transition simple -->
   <script>
     const cover = document.getElementById('coverContainer');
     cover.addEventListener('click', () => {
-      cover.classList.add('animate');
+      cover.classList.add('page-transition');
       setTimeout(() => {
         window.location.href = "pages/page1.html";
-      }, 1000); // doit correspondre à la durée de l'animation CSS
+      }, 600); // synchronisé avec l'animation CSS
     });
 
     // Mode nuit toggle
-    const toggle = document.getElementById('toggle-dark');
-    toggle.addEventListener('click', () => {
+    document.getElementById('toggle-dark').addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
     });
 
-    // Barre de progression (inutile ici mais incluse si jamais nécessaire)
+    // Barre de progression
     const progress = document.createElement('div');
     progress.classList.add('progress-bar');
     document.body.appendChild(progress);
