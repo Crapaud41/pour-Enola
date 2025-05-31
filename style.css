@@ -48,12 +48,12 @@ body {
   position: relative;
 }
 
-/* Trait vertical simple et centré */
+/* Trait vertical simple et centré, limité en hauteur */
 .page-blanche::before {
   content: '';
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 140px; /* Ajuste si nécessaire */
+  height: 500px; /* Ajuste à la hauteur des textes sommaire */
   left: 50%;
   width: 1px;
   background-color: rgba(0, 0, 0, 0.2);
@@ -123,4 +123,3 @@ body {
 .page-transition {
   animation: tourner-page 0.6s ease forwards;
 }
-
