@@ -5,6 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chapitre 2</title>
   <link rel="stylesheet" href="../style.css" />
+  <style>
+    .sommaire {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      border-left: 2px solid #999;
+      border-right: 2px solid #999;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .colonne {
+      width: 48%;
+      text-align: left;
+    }
+
+    .ligne {
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .page-num {
+      margin-left: 10px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -13,23 +40,73 @@
       <!-- Titre -->
       <h1>Sommaire</h1>
 
-      <!-- Zone texte vide ou à compléter -->
-      <div class="texte-final"></div>
+      <!-- Contenu du sommaire -->
+      <div class="sommaire">
+        <!-- Colonne de gauche (pages 3 à 25) -->
+        <div class="colonne">
+          <div class="ligne"><span>Portrait d’Enola</span><span class="page-num">Page 3</span></div>
+          <div class="ligne"><span>Lettre à Enola</span><span class="page-num">Page 4</span></div>
+          <div class="ligne"><span>Un lien indestructible</span><span class="page-num">Page 5</span></div>
+          <div class="ligne"><span>Une rencontre inattendue</span><span class="page-num">Page 6</span></div>
+          <div class="ligne"><span>Huit surnoms, mais un seul cœur</span><span class="page-num">Page 7</span></div>
+          <div class="ligne"><span>17 raisons de pourquoi je t’aime</span><span class="page-num">Page 8</span></div>
+          <div class="ligne"><span>14 raisons de mon admiration</span><span class="page-num">Page 9</span></div>
+          <div class="ligne"><span>Acrostiche d’Enola</span><span class="page-num">Page 10</span></div>
+          <div class="ligne"><span>Si Enola était...</span><span class="page-num">Page 11</span></div>
+          <div class="ligne"><span>Ce que je suis devenu grâce à toi</span><span class="page-num">Page 12</span></div>
+          <div class="ligne"><span>Ce que j’aime chez Enola</span><span class="page-num">Page 13</span></div>
+          <div class="ligne"><span>Page 14</span></div>
+          <div class="ligne"><span>Page 15</span></div>
+          <div class="ligne"><span>Page 16</span></div>
+          <div class="ligne"><span>Page 17</span></div>
+          <div class="ligne"><span>Page 18</span></div>
+          <div class="ligne"><span>Page 19</span></div>
+          <div class="ligne"><span>Page 20</span></div>
+          <div class="ligne"><span>Page 21</span></div>
+          <div class="ligne"><span>Page 22</span></div>
+          <div class="ligne"><span>Page 23</span></div>
+          <div class="ligne"><span>Page 24</span></div>
+          <div class="ligne"><span>Page 25</span></div>
+        </div>
+
+        <!-- Colonne de droite (pages 26 à 48) -->
+        <div class="colonne">
+          <div class="ligne"><span>Page 26</span></div>
+          <div class="ligne"><span>Page 27</span></div>
+          <div class="ligne"><span>Page 28</span></div>
+          <div class="ligne"><span>Page 29</span></div>
+          <div class="ligne"><span>Page 30</span></div>
+          <div class="ligne"><span>Page 31</span></div>
+          <div class="ligne"><span>Page 32</span></div>
+          <div class="ligne"><span>Page 33</span></div>
+          <div class="ligne"><span>Page 34</span></div>
+          <div class="ligne"><span>Page 35</span></div>
+          <div class="ligne"><span>Page 36</span></div>
+          <div class="ligne"><span>Page 37</span></div>
+          <div class="ligne"><span>Page 38</span></div>
+          <div class="ligne"><span>Page 39</span></div>
+          <div class="ligne"><span>Page 40</span></div>
+          <div class="ligne"><span>Page 41</span></div>
+          <div class="ligne"><span>Page 42</span></div>
+          <div class="ligne"><span>Page 43</span></div>
+          <div class="ligne"><span>Page 44</span></div>
+          <div class="ligne"><span>Page 45</span></div>
+          <div class="ligne"><span>Page 46</span></div>
+          <div class="ligne"><span>Page 47</span></div>
+          <div class="ligne"><strong>Page 48</strong></div>
+        </div>
+      </div>
 
       <!-- Numéro de page -->
       <div class="numero-page">2</div>
-
-      <!-- Flèches de navigation -->
       <a href="page1.html" class="fleche-gauche">&#8592;</a>
       <a href="page3.html" class="fleche-droite">&#8594;</a>
-
     </div>
   </div>
 
-  <!-- Script pour effet de page tournée -->
+  <!-- Script effet page tournée -->
   <script>
     const links = document.querySelectorAll('.fleche-gauche, .fleche-droite');
-
     links.forEach(link => {
       link.addEventListener('click', function (e) {
         e.preventDefault();
