@@ -39,17 +39,17 @@
 
       .window-transition {
         position: fixed;
-        top: 100%;
-        left: 0;
+        top: 0;
+        left: 100%;
         width: 100%;
         height: 100%;
         background-color: #1F75FE;
         z-index: 9999;
-        transition: top 0.8s ease-in-out;
+        transition: left 0.8s ease-in-out;
       }
 
       .window-transition.active {
-        top: 0;
+        left: 0;
       }
     </style>
   </head>
@@ -71,7 +71,7 @@
         transition.classList.add('active');
         setTimeout(() => {
           window.location.href = this.href;
-        }, 900); // Laisse le temps à l'animation de finir
+        }, 900); // attend la fin de l’animation
       });
     </script>
   </body>
