@@ -2,13 +2,14 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pour Enola</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
 </head>
 <body>
   <!-- Bouton mode nuit -->
-  <button id="toggle-dark">🌙</button>
+  <button id="toggle-dark" aria-label="Activer ou désactiver le mode nuit">🌙</button>
 
   <!-- Menu de navigation rapide -->
   <div class="menu-flottant">
@@ -17,37 +18,27 @@
     <a href="pages/page48.html">Dernière page</a>
   </div>
 
-  <!-- Couverture cliquable (sans fond blanc) -->
+  <!-- Couverture cliquable -->
   <div class="cover-container" id="coverContainer">
     <img src="couverture.jpg" alt="Couverture" class="cover" />
   </div>
 
-  <!-- Script pour transition simple -->
+  <!-- Script JS -->
   <script>
+    // Transition vers la première page
     const cover = document.getElementById('coverContainer');
     cover.addEventListener('click', () => {
       cover.classList.add('page-transition');
       setTimeout(() => {
         window.location.href = "pages/page1.html";
-      }, 600); // synchronisé avec l'animation CSS
+      }, 600);
     });
 
-    // Mode nuit toggle
+    // Mode nuit
     document.getElementById('toggle-dark').addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
-    });
-
-    // Barre de progression
-    const progress = document.createElement('div');
-    progress.classList.add('progress-bar');
-    document.body.appendChild(progress);
-
-    window.addEventListener('scroll', () => {
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const progressWidth = (scrollTop / scrollHeight) * 100;
-      progress.style.width = `${progressWidth}%`;
     });
   </script>
 </body>
 </html>
+
