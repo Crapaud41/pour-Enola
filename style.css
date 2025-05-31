@@ -1,6 +1,8 @@
 body {
   margin: 0;
-  background-color: #1F75FE; /* bleu */
+  background: linear-gradient(-45deg, #1F75FE, #6CA6CD, #1F75FE);
+  background-size: 400% 400%;
+  animation: fondAnime 10s ease infinite;
   font-family: 'Georgia', serif;
   color: white;
   display: flex;
@@ -8,6 +10,28 @@ body {
   align-items: center;
   height: 100vh;
   position: relative;
+  transition: opacity 0.6s ease;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+body.dark-mode {
+  background: #121212;
+  color: white;
+}
+
+body.dark-mode .page-blanche {
+  background-color: #1e1e1e;
+  color: #eee;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes fondAnime {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .container {
@@ -30,9 +54,9 @@ body {
 }
 
 .page-blanche {
-  background-color: #fdf6e3; /* teinte vieille page */
+  background-color: #fdf6e3;
   color: black;
-  padding: 40px 20px;
+  padding: 50px 30px;
   border-radius: 10px;
   max-width: 800px;
   width: 100%;
@@ -46,11 +70,26 @@ body {
   align-items: center;
   text-align: center;
   position: relative;
+  border: 2px dashed rgba(0, 0, 0, 0.1);
+}
+
+.page-sommaire::before {
+  content: '';
+  position: absolute;
+  top: 110px;
+  bottom: 120px;
+  left: 50%;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: translateX(-50%);
+  z-index: 0;
 }
 
 .page-blanche h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 36px;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .texte-final {
@@ -62,12 +101,35 @@ body {
   width: 100%;
   z-index: 1;
   gap: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInText 1s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .sommaire-gauche,
 .sommaire-droite {
   flex: 1;
   text-align: left;
+}
+
+.sommaire-gauche p,
+.sommaire-droite p {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.sommaire-gauche .page-num,
+.sommaire-droite .page-num {
+  margin-left: 10px;
 }
 
 .numero-page {
@@ -77,7 +139,6 @@ body {
   z-index: 1;
 }
 
-/* Flèches de navigation */
 .fleche-gauche,
 .fleche-droite {
   position: absolute;
@@ -105,7 +166,6 @@ body {
   right: 20px;
 }
 
-/* Animation effet page qui tourne */
 @keyframes tourner-page {
   0% {
     transform: rotateY(0deg);
@@ -121,25 +181,48 @@ body {
   animation: tourner-page 0.6s ease forwards;
 }
 
-/* Nouveau style spécifique au sommaire */
-.sommaire-gauche p {
+#toggle-dark {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.menu-flottant {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(255,255,255,0.8);
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  z-index: 10;
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  flex-direction: column;
+  gap: 5px;
 }
 
-.sommaire-gauche .page-num {
-  margin-left: 10px;
+.menu-flottant a {
+  color: #333;
+  text-decoration: none;
 }
 
-.page-sommaire::before {
-  content: '';
-  position: absolute;
-  top: 110px;
-  bottom: 120px;
-  left: 50%;
-  width: 1px;
-  background-color: rgba(0, 0, 0, 0.2);
-  transform: translateX(-50%);
-  z-index: 0;
+.menu-flottant a:hover {
+  text-decoration: underline;
 }
+
+.progress-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: #fff;
+  z-index: 999;
+  transition: width 0.3s ease;
+}
+
