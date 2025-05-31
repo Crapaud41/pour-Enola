@@ -48,19 +48,6 @@ body {
   position: relative;
 }
 
-/* Trait vertical uniquement sur la page du sommaire */
-.page-sommaire::before {
-  content: '';
-  position: absolute;
-  top: 110px; /* aligné entre page 3 et page 26 */
-  bottom: 120px; /* pour s’arrêter à hauteur de page 25 */
-  left: 50%;
-  width: 1px;
-  background-color: rgba(0, 0, 0, 0.2);
-  transform: translateX(-50%);
-  z-index: 0;
-}
-
 .page-blanche h1 {
   margin-top: 0;
   margin-bottom: 20px;
@@ -134,3 +121,25 @@ body {
   animation: tourner-page 0.6s ease forwards;
 }
 
+/* Nouveau style spécifique au sommaire */
+.sommaire-gauche p {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.sommaire-gauche .page-num {
+  margin-left: 10px;
+}
+
+.page-sommaire::before {
+  content: '';
+  position: absolute;
+  top: 110px;
+  bottom: 120px;
+  left: 50%;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: translateX(-50%);
+  z-index: 0;
+}
