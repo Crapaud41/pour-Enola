@@ -48,15 +48,15 @@ body {
   position: relative;
 }
 
-/* Afficher un trait vertical uniquement sur la page de sommaire */
+/* Trait vertical uniquement sur la page du sommaire */
 .page-sommaire::before {
   content: '';
   position: absolute;
-  top: 150px; /* Ajuste la hauteur de début du trait */
-  bottom: 120px; /* Ajuste la hauteur de fin du trait */
+  top: 110px; /* aligné entre page 3 et page 26 */
+  bottom: 120px; /* pour s’arrêter à hauteur de page 25 */
   left: 50%;
   width: 1px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   transform: translateX(-50%);
   z-index: 0;
 }
@@ -70,7 +70,17 @@ body {
   margin-bottom: 40px;
   font-size: 18px;
   max-width: 90%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   z-index: 1;
+  gap: 40px;
+}
+
+.sommaire-gauche,
+.sommaire-droite {
+  flex: 1;
+  text-align: left;
 }
 
 .numero-page {
