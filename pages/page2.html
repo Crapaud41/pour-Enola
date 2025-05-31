@@ -8,13 +8,13 @@
 </head>
 <body>
   <div class="container">
-    <!-- Ajout de la classe "page-sommaire" ici -->
+    <!-- Classe spéciale pour afficher le trait central uniquement ici -->
     <div class="page-blanche page-sommaire">
 
       <!-- Titre -->
       <h1>Sommaire</h1>
 
-      <!-- Texte vide (ou tu peux ajouter du contenu plus tard) -->
+      <!-- Texte du sommaire -->
       <div class="texte-final">
         <div class="sommaire-gauche">
           <p>Page 3 — Portrait d'Enola</p>
@@ -81,7 +81,6 @@
   <!-- Script pour effet de page tournée -->
   <script>
     const links = document.querySelectorAll('.fleche-gauche, .fleche-droite');
-
     links.forEach(link => {
       link.addEventListener('click', function (e) {
         e.preventDefault();
