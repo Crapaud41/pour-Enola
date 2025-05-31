@@ -61,13 +61,9 @@ body.dark-mode .page-blanche {
   border: 3px solid white;
   border-radius: 8px;
   transition: transform 1s ease-in-out;
-  transform-origin: left center;
+  transform-origin: center;
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
   cursor: pointer;
-}
-
-.cover-container.animate .cover {
-  transform: perspective(1000px) rotateY(-100deg);
 }
 
 /* Page blanche */
@@ -252,3 +248,4 @@ body.dark-mode .page-blanche {
   z-index: 999;
   transition: width 0.3s ease;
 }
+
