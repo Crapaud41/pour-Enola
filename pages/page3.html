@@ -7,12 +7,12 @@
   <link rel="stylesheet" href="../style.css" />
   <style>
     .portrait-titre {
-  font-family: 'Great Vibes', cursive;
-  font-size: 36px;
-  margin-top: 20px;
-  margin-bottom: 80px; /* identique à Sommaire */
-  text-align: center;
-}
+      font-family: 'Great Vibes', cursive;
+      font-size: 36px;
+      margin-top: 20px;
+      margin-bottom: 80px;
+      text-align: center;
+    }
 
     .portrait-liste {
       display: flex;
@@ -30,7 +30,7 @@
     .portrait-item {
       display: flex;
       gap: 10px;
-      font-size: 16px;
+      font-size: 15px;
       margin: 3px 0;
     }
 
@@ -46,25 +46,27 @@
     }
 
     .numero-page {
-      position: absolute;
-      bottom: 20px;
       font-size: 16px;
       color: #555;
+      margin-top: 30px;
+      text-align: center;
       z-index: 1;
     }
 
     .fleche-gauche, .fleche-droite {
       bottom: 20px;
     }
+
+    .page-blanche {
+      overflow-y: auto;
+    }
   </style>
 </head>
 <body>
   <div class="page-blanche">
-    <!-- Titre en haut -->
     <h1 class="portrait-titre">Portrait d'Enola</h1>
 
-    <!-- Contenu en 2 colonnes -->
-    <div class="portrait-liste">
+    <div class="portrait-liste texte-final">
       <div class="portrait-colonne">
         <div class="portrait-item"><div class="portrait-label">Prénom</div><div class="portrait-valeur">Enola</div></div>
         <div class="portrait-item"><div class="portrait-label">Nom</div><div class="portrait-valeur">Philippe</div></div>
