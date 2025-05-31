@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chapitre 1</title>
+  <title>Présentation</title>
   <link rel="stylesheet" href="../style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
 </head>
 <body>
   <!-- Bouton mode nuit -->
-  <button id="toggle-dark">Mode Nuit</button>
+  <button id="toggle-dark" aria-label="Activer/désactiver le mode nuit">🌙</button>
 
   <!-- Menu de navigation -->
   <div class="menu-flottant">
-    <a href="page1.html">Accueil</a>
+    <a href="../index.html">Accueil</a>
     <a href="page2.html">Sommaire</a>
     <a href="page3.html">Page 3</a>
   </div>
@@ -24,7 +25,7 @@
       <!-- Titre -->
       <h1>Présentation</h1>
 
-      <!-- Image centrée -->
+      <!-- Image d'Enola -->
       <img
         src="../photo.jpg"
         alt="Photo d'Enola"
@@ -36,29 +37,24 @@
         <p>
           Il y a des rencontres qui changent une vie. Enola en fait partie.
           Depuis 7 ans, elle est mon pilier, mon ange gardien, celle qui
-          m'a tendu la main quand j'en avais le plus besoin. Chaque mot ici
-          est une trace de l’amour que j’ai pour mon amour d'Enola.
+          m’a tendu la main quand j’en avais le plus besoin. Chaque mot ici
+          est une trace de l’amour que je ressens pour mon Enola.
         </p>
       </div>
 
       <!-- Numéro de page -->
-      <div class="numero-page">1</div>
+      <div class="numero-page">Page 1</div>
 
       <!-- Flèches de navigation -->
-      <a href="../index.html" class="fleche-gauche">&#8592;</a>
-      <a href="page2.html" class="fleche-droite">&#8594;</a>
-
+      <a href="../index.html" class="fleche-gauche">←</a>
+      <a href="page2.html" class="fleche-droite">→</a>
     </div>
   </div>
 
-  <!-- Barre de progression -->
-  <div class="progress-bar" id="progressBar"></div>
-
   <!-- Scripts -->
   <script>
-    // Animation effet page tournée
-    const links = document.querySelectorAll('.fleche-gauche, .fleche-droite');
-    links.forEach(link => {
+    // Transition douce entre les pages
+    document.querySelectorAll('.fleche-gauche, .fleche-droite').forEach(link => {
       link.addEventListener('click', function (e) {
         e.preventDefault();
         const target = this.href;
@@ -72,13 +68,6 @@
     // Mode nuit
     document.getElementById('toggle-dark').addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
-    });
-
-    // Barre de progression
-    window.addEventListener('scroll', () => {
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scroll = (window.scrollY / docHeight) * 100;
-      document.getElementById('progressBar').style.width = scroll + '%';
     });
   </script>
 </body>
