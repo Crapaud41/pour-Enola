@@ -48,15 +48,15 @@ body {
   position: relative;
 }
 
-/* Trait vertical centré descendant jusqu'à la hauteur de la page 25 */
-.page-blanche::before {
+/* Afficher un trait vertical uniquement sur la page de sommaire */
+.page-sommaire::before {
   content: '';
   position: absolute;
-  top: 140px; /* position de départ */
-  height: 620px; /* étendu pour aller jusqu’à Page 25 */
+  top: 150px; /* Ajuste la hauteur de début du trait */
+  bottom: 120px; /* Ajuste la hauteur de fin du trait */
   left: 50%;
   width: 1px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
   transform: translateX(-50%);
   z-index: 0;
 }
