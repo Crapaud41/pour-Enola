@@ -3,43 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Page 3</title>
+  <title>Portrait d'Enola</title>
   <link rel="stylesheet" href="../style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Bouton mode nuit -->
-  <button id="toggle-dark">🌙</button>
-
-  <!-- Contenu principal -->
-  <div class="page-blanche">
-    <h1>Page 3</h1>
-    <p class="texte-final">
-      Voici le contenu de la page 3. Tu peux écrire ici tout ce que tu souhaites partager, que ce soit un souvenir, un message ou une réflexion personnelle. Le style est doux et cohérent avec le reste du livre.
-    </p>
+  <div class="page-blanche page-transition">
+    <h1>Portrait d'Enola</h1>
+    <div class="texte-final">
+      <div>
+        <p>Prénom : Enola</p>
+        <p>Nom : Philippe</p>
+        <p>Surnom : Nono, Mon petit ange</p>
+        <p>Date de naissance : 23/05/1999</p>
+        <p>Âge : 25 ans</p>
+        <p>Couleur préférée : Bleu</p>
+        <p>Plat préféré : </p>
+        <p>Couleur des yeux : Bleu Gris</p>
+        <p>Couleur des cheveux : Marron</p>
+        <p>Taille : 1 Mètre 55</p>
+        <p>Poids : 50 Kilos</p>
+        <p>Pointure : </p>
+        <p>Taille de t-shirt : </p>
+        <p>Taille de pantalon : </p>
+        <p>Groupe sanguin : </p>
+        <p>Style musical : </p>
+        <p>Bonbon préféré : </p>
+        <p>Signe astrologique : Gémeaux</p>
+        <p>Signe astrologique chinois : Lapin</p>
+        <p>Animal préféré : Murphy (son chat)</p>
+        <p>Fleur préférée : </p>
+        <p>Parfum préféré : </p>
+        <p>Film préféré : </p>
+        <p>Série préférée : </p>
+        <p>Ce qui la rend unique : Son visage</p>
+        <p>Peur / phobie : </p>
+        <p>Ce qui la rend heureuse : Nos appels</p>
+        <p>Emoji qui la représente : ♥</p>
+        <p>Boisson préférée : </p>
+        <p>Alcool préféré : Desperados - Rhum</p>
+        <p>Fruit préféré : </p>
+        <p>Dessert préféré : </p>
+        <p>Meilleure qualité selon moi : Son écoute</p>
+        <p>Pourquoi elle : Enola m'a sauvé, je l'aime</p>
+      </div>
+    </div>
 
     <!-- Flèches de navigation -->
     <a href="page2.html" class="fleche-gauche">←</a>
     <a href="page4.html" class="fleche-droite">→</a>
+    <div class="numero-page">Page 3</div>
   </div>
-
-  <!-- Script JS -->
-  <script>
-    document.getElementById('toggle-dark').addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
-
-    const progress = document.createElement('div');
-    progress.classList.add('progress-bar');
-    document.body.appendChild(progress);
-
-    window.addEventListener('scroll', () => {
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const progressWidth = (scrollTop / scrollHeight) * 100;
-      progress.style.width = `${progressWidth}%`;
-    });
-  </script>
 </body>
 </html>
-
