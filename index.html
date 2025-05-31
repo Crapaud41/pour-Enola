@@ -2,15 +2,53 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mon Livre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pour Enola</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <a href="pages/page1.html">
-      <img src="couverture.jpg" alt="Couverture du livre" class="cover" />
-    </a>
+  <!-- Bouton mode nuit -->
+  <button id="toggle-dark">🌙</button>
+
+  <!-- Menu de navigation rapide -->
+  <div class="menu-flottant">
+    <a href="index.html">Accueil</a>
+    <a href="pages/page2.html">Sommaire</a>
+    <a href="pages/page48.html">Dernière page</a>
   </div>
+
+  <!-- Couverture cliquable -->
+  <div class="cover-container" id="coverContainer">
+    <img src="cover.jpg" alt="Couverture" class="cover" />
+  </div>
+
+  <!-- Script d’animation couverture -->
+  <script>
+    const cover = document.getElementById('coverContainer');
+    cover.addEventListener('click', () => {
+      cover.classList.add('animate');
+      setTimeout(() => {
+        window.location.href = "pages/page1.html";
+      }, 1000); // Temps synchronisé avec l’animation
+    });
+
+    // Mode nuit toggle
+    const toggle = document.getElementById('toggle-dark');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+
+    // Barre de progression (inutile ici mais incluse si jamais nécessaire)
+    const progress = document.createElement('div');
+    progress.classList.add('progress-bar');
+    document.body.appendChild(progress);
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progressWidth = (scrollTop / scrollHeight) * 100;
+      progress.style.width = `${progressWidth}%`;
+    });
+  </script>
 </body>
 </html>
