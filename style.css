@@ -48,12 +48,12 @@ body {
   position: relative;
 }
 
-/* Trait vertical simple et centré, limité en hauteur */
+/* Trait vertical centré descendant jusqu'à la hauteur de la page 25 */
 .page-blanche::before {
   content: '';
   position: absolute;
-  top: 140px; /* Ajuste si nécessaire */
-  height: 500px; /* Ajuste à la hauteur des textes sommaire */
+  top: 140px; /* position de départ */
+  height: 620px; /* étendu pour aller jusqu’à Page 25 */
   left: 50%;
   width: 1px;
   background-color: rgba(0, 0, 0, 0.2);
