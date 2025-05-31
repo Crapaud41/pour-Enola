@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chapitre 2</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
   <div class="container">
@@ -13,7 +13,7 @@
       <!-- Titre -->
       <h1>Sommaire</h1>
 
-      <!-- Zone texte vide si besoin -->
+      <!-- Texte vide (ou tu peux ajouter du contenu plus tard) -->
       <div class="texte-final"></div>
 
       <!-- Numéro de page -->
@@ -21,7 +21,6 @@
 
       <!-- Flèches de navigation -->
       <a href="page1.html" class="fleche-gauche">&#8592;</a>
-      <a href="page2.html" class="fleche-droite">&#8594;</a>
       <a href="page3.html" class="fleche-droite">&#8594;</a>
 
     </div>
@@ -36,7 +35,6 @@
         e.preventDefault();
         const target = this.href;
         document.querySelector('.page-blanche').classList.add('page-transition');
-
         setTimeout(() => {
           window.location.href = target;
         }, 600);
