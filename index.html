@@ -13,10 +13,10 @@
         background-size: 400% 400%;
         animation: gradientShift 20s ease infinite;
         height: 100vh;
+        overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
         opacity: 0;
         animation: fadeIn 2s forwards;
       }
@@ -32,27 +32,15 @@
       }
 
       .container {
-        position: relative;
         text-align: center;
       }
 
       .cover {
-        width: 300px;
+        width: 85vmin; /* s'adapte à l'écran sans déborder */
+        max-width: 500px;
         border: 3px solid white;
-        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        box-shadow: 0 0 25px rgba(0,0,0,0.2);
         cursor: pointer;
-      }
-
-      .gui-text {
-        position: absolute;
-        bottom: 22px;
-        left: 50%;
-        transform: translateX(-50%);
-        color: white;
-        font-size: 1em;
-        font-weight: bold;
-        text-shadow: 0 0 5px rgba(0,0,0,0.5);
-        pointer-events: none;
       }
     </style>
   </head>
@@ -61,7 +49,6 @@
       <a href="page1.html">
         <img src="couverture.jpg" alt="Couverture du livre" class="cover" />
       </a>
-      <div class="gui-text">GuiGui</div>
     </div>
   </body>
 </html>
