@@ -71,6 +71,7 @@ body.dark-mode .page-blanche {
   text-align: center;
   position: relative;
   border: 2px dashed rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ajouté ici */
 }
 
 .page-sommaire::before {
@@ -87,7 +88,7 @@ body.dark-mode .page-blanche {
 
 .page-blanche h1 {
   font-family: 'Great Vibes', cursive;
-  font-size: 36px;
+  font-size: 30px; /* réduit pour éviter le scroll */
   margin-top: 0;
   margin-bottom: 30px;
 }
