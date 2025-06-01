@@ -5,36 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Présentation</title>
   <link rel="stylesheet" href="../style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- Bouton mode nuit -->
-  <button id="toggle-dark" aria-label="Activer/désactiver le mode nuit">🌙</button>
-
-  <!-- Menu de navigation -->
-  <div class="menu-flottant">
-    <a href="../index.html">Accueil</a>
-    <a href="page2.html">Sommaire</a>
-    <a href="page3.html">Page 3</a>
-  </div>
-
   <!-- Contenu principal -->
   <div class="container">
-    <div class="page-blanche">
+    <div class="page-blanche presentation-fullscreen">
 
       <!-- Titre -->
-      <h1>Présentation</h1>
+      <h1 class="titre-classique">Présentation</h1>
 
       <!-- Image d'Enola -->
       <img
         src="../photo.jpg"
         alt="Photo d'Enola"
-        style="width: 400px; height: auto; border-radius: 10px; margin: 40px 0 80px;"
+        style="max-height: 35vh; width: auto; border-radius: 10px; margin: 20px 0 40px;"
       />
 
       <!-- Texte -->
-      <div class="texte-final">
-        <p>
+      <div class="texte-final" style="animation: none; opacity: 1; transform: none;">
+        <p style="max-width: 700px;">
           Il y a des rencontres qui changent une vie. Enola en fait partie.
           Depuis 7 ans, elle est mon pilier, mon ange gardien, celle qui
           m’a tendu la main quand j’en avais le plus besoin. Chaque mot ici
@@ -63,11 +52,6 @@
           window.location.href = target;
         }, 600);
       });
-    });
-
-    // Mode nuit
-    document.getElementById('toggle-dark').addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
     });
   </script>
 </body>
