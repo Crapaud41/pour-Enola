@@ -8,25 +8,32 @@
 </head>
 <body>
   <div class="container">
-    <div class="page-blanche presentation-fullscreen">
+    <div class="page-blanche presentation-fullscreen" style="padding: 30px 30px 30px 30px; position: relative;">
 
-      <!-- Titre en haut -->
-      <h1 class="titre-classique" style="margin-top: 30px;">Présentation</h1>
+      <!-- Titre très haut mais sans coller -->
+      <h1 class="titre-classique" style="margin-top: 10px;">Présentation</h1>
 
-      <!-- Image au centre -->
-      <img src="../photo.jpg" alt="Photo d'Enola" style="max-height: 35vh; width: auto; margin: 40px 0; border-radius: 10px;" />
+      <!-- Image fixe -->
+      <img src="../photo.jpg" alt="Photo d'Enola"
+        style="max-height: 35vh; width: auto; margin: 20px 0 10px; border-radius: 10px;" />
 
-      <!-- Texte un peu plus bas que l'image -->
-      <p style="max-width: 700px; font-size: 18px; margin-bottom: auto;">
+      <!-- Texte abaissé -->
+      <p style="max-width: 700px; font-size: 18px; margin: 30px 0 0;">
         Il y a des rencontres qui changent une vie. Enola en fait partie. Depuis 7 ans, elle est mon pilier, mon ange gardien, celle qui m’a tendu la main quand j’en avais le plus besoin. Chaque mot ici est une trace de l’amour que je ressens pour mon Enola.
       </p>
 
-      <!-- Numéro de page collé en bas de la page blanche -->
-      <div class="numero-page" style="margin-bottom: 20px;">Page 1</div>
+      <!-- Numéro de page en bas intérieur -->
+      <div class="numero-page" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
+        Page 1
+      </div>
 
-      <!-- Flèches de navigation (bulle collée en bas de l'écran) -->
-      <a href="../index.html" class="fleche-gauche">←</a>
-      <a href="page2.html" class="fleche-droite">→</a>
+      <!-- Flèche gauche en bas à gauche de la page blanche -->
+      <a href="../index.html" class="fleche-gauche"
+        style="position: absolute; bottom: 20px; left: 20px;">←</a>
+
+      <!-- Flèche droite en bas à droite de la page blanche -->
+      <a href="page2.html" class="fleche-droite"
+        style="position: absolute; bottom: 20px; right: 20px;">→</a>
     </div>
   </div>
 
