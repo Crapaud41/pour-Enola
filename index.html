@@ -33,11 +33,12 @@
       .cover {
         height: 90vh;
         border: 3px solid white;
-        box-shadow: 0 0 25px rgba(0,0,0,0.2);
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
         cursor: pointer;
+        display: block;
       }
 
-      .slide-transition {
+      .window-transition {
         position: fixed;
         top: 0;
         left: 100%;
@@ -48,30 +49,32 @@
         transition: left 0.8s ease-in-out;
       }
 
-      .slide-transition.active {
+      .window-transition.active {
         left: 0;
       }
     </style>
   </head>
   <body>
-    <div id="transition" class="slide-transition"></div>
+    <div id="transition" class="window-transition"></div>
 
     <div class="container">
-      <a id="coverLink" href="pages/page1.html">
+      <a href="pages/page1.html" id="coverLink">
         <img src="couverture.jpg" alt="Couverture du livre" class="cover" />
       </a>
     </div>
 
     <script>
-      const link = document.getElementById('coverLink');
-      const transition = document.getElementById('transition');
+      document.addEventListener("DOMContentLoaded", () => {
+        const link = document.getElementById("coverLink");
+        const transition = document.getElementById("transition");
 
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        transition.classList.add('active');
-        setTimeout(() => {
-          window.location.href = this.href;
-        }, 850);
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          transition.classList.add("active");
+          setTimeout(() => {
+            window.location.href = this.href;
+          }, 850); // attendre que l'animation se termine
+        });
       });
     </script>
   </body>
