@@ -79,7 +79,7 @@ body.dark-mode .page-blanche {
   line-height: 1.6;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   position: relative;
@@ -92,31 +92,13 @@ body.dark-mode .page-blanche {
 .page-blanche h1 {
   font-family: 'Great Vibes', cursive;
   font-size: 36px;
-  margin-top: 10px;
+  margin-top: 10px; /* légèrement remonté */
   margin-bottom: 20px;
-}
-
-/* Image centrée et agrandie */
-.page-blanche img {
-  max-height: 42vh;
-  width: auto;
-  transform: scale(1.2);
-  border-radius: 40px;
-  margin-bottom: 20px;
-}
-
-/* Texte de présentation */
-.page-blanche p {
-  font-size: 16px;
-  max-width: 700px;
-  text-align: center;
-  margin: 0;
-  margin-top: 20px;
 }
 
 /* Texte animé */
 .texte-final {
-  margin-bottom: 100px;
+  margin-bottom: 100px; /* descend encore plus */
   font-size: 18px;
   max-width: 90%;
   display: flex;
@@ -172,11 +154,11 @@ body.dark-mode .page-blanche {
 .numero-page {
   font-size: 16px;
   color: #555;
-  padding-bottom: 20px;
+  padding-bottom: 20px; /* légèrement descendu */
   z-index: 1;
 }
 
-/* Flèches navigation */
+/* Flèches dans les coins bas gauche/droite de la page blanche */
 .fleche-gauche,
 .fleche-droite {
   position: absolute;
@@ -268,7 +250,7 @@ body.dark-mode .page-blanche {
   transition: width 0.3s ease;
 }
 
-/* Titre classique en Arial gras */
+/* Titre Arial gras */
 .titre-classique {
   font-family: Arial, sans-serif;
   font-weight: bold;
@@ -277,7 +259,7 @@ body.dark-mode .page-blanche {
   margin-bottom: 20px;
 }
 
-/* Présentation en plein écran */
+/* Présentation en plein écran, sans scroll */
 .presentation-fullscreen {
   height: 100dvh;
   overflow: hidden;
