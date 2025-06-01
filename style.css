@@ -259,7 +259,7 @@ body.dark-mode .page-blanche {
   transition: width 0.3s ease;
 }
 
-/* Titre Arial gras */
+/* TITRE ARIAL GRAS — AJOUT ⚠️ */
 .titre-classique {
   font-family: Arial, sans-serif;
   font-weight: bold;
@@ -268,7 +268,7 @@ body.dark-mode .page-blanche {
   margin-bottom: 20px;
 }
 
-/* Présentation en plein écran, sans scroll */
+/* PLEIN ÉCRAN POUR PAGE1 — AJOUT ⚠️ */
 .presentation-fullscreen {
   height: 100dvh;
   overflow: hidden;
