@@ -92,13 +92,22 @@ body.dark-mode .page-blanche {
 .page-blanche h1 {
   font-family: 'Great Vibes', cursive;
   font-size: 36px;
-  margin-top: 10px; /* légèrement remonté */
+  margin-top: 10px;
   margin-bottom: 20px;
+}
+
+/* Paragraphe principal sur page1.html */
+.page-blanche p {
+  font-size: 16px;
+  max-width: 700px;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 150px; /* environ 1 cm au-dessus de "Page 1" */
 }
 
 /* Texte animé */
 .texte-final {
-  margin-bottom: 100px; /* descend encore plus */
+  margin-bottom: 100px;
   font-size: 18px;
   max-width: 90%;
   display: flex;
@@ -154,7 +163,7 @@ body.dark-mode .page-blanche {
 .numero-page {
   font-size: 16px;
   color: #555;
-  padding-bottom: 20px; /* légèrement descendu */
+  padding-bottom: 20px;
   z-index: 1;
 }
 
