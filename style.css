@@ -247,3 +247,25 @@ body.dark-mode .page-blanche {
   z-index: 999;
   transition: width 0.3s ease;
 }
+
+/* Titre Arial gras */
+.titre-classique {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Présentation en plein écran, sans scroll */
+.presentation-fullscreen {
+  height: 100dvh;
+  overflow: hidden;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
