@@ -7,42 +7,31 @@
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
-  <!-- Contenu principal -->
   <div class="container">
     <div class="page-blanche presentation-fullscreen">
 
-      <!-- Titre -->
-      <h1 class="titre-classique">Présentation</h1>
+      <!-- Titre en haut -->
+      <h1 class="titre-classique" style="margin-top: 30px;">Présentation</h1>
 
-      <!-- Image d'Enola -->
-      <img
-        src="../photo.jpg"
-        alt="Photo d'Enola"
-        style="max-height: 35vh; width: auto; border-radius: 10px; margin: 20px 0 40px;"
-      />
+      <!-- Image au centre -->
+      <img src="../photo.jpg" alt="Photo d'Enola" style="max-height: 35vh; width: auto; margin: 40px 0; border-radius: 10px;" />
 
-      <!-- Texte -->
-      <div class="texte-final" style="animation: none; opacity: 1; transform: none;">
-        <p style="max-width: 700px;">
-          Il y a des rencontres qui changent une vie. Enola en fait partie.
-          Depuis 7 ans, elle est mon pilier, mon ange gardien, celle qui
-          m’a tendu la main quand j’en avais le plus besoin. Chaque mot ici
-          est une trace de l’amour que je ressens pour mon Enola.
-        </p>
-      </div>
+      <!-- Texte un peu plus bas que l'image -->
+      <p style="max-width: 700px; font-size: 18px; margin-bottom: auto;">
+        Il y a des rencontres qui changent une vie. Enola en fait partie. Depuis 7 ans, elle est mon pilier, mon ange gardien, celle qui m’a tendu la main quand j’en avais le plus besoin. Chaque mot ici est une trace de l’amour que je ressens pour mon Enola.
+      </p>
 
-      <!-- Numéro de page -->
-      <div class="numero-page">Page 1</div>
+      <!-- Numéro de page collé en bas de la page blanche -->
+      <div class="numero-page" style="margin-bottom: 20px;">Page 1</div>
 
-      <!-- Flèches de navigation -->
+      <!-- Flèches de navigation (bulle collée en bas de l'écran) -->
       <a href="../index.html" class="fleche-gauche">←</a>
       <a href="page2.html" class="fleche-droite">→</a>
     </div>
   </div>
 
-  <!-- Scripts -->
+  <!-- Script de transition -->
   <script>
-    // Transition douce entre les pages
     document.querySelectorAll('.fleche-gauche, .fleche-droite').forEach(link => {
       link.addEventListener('click', function (e) {
         e.preventDefault();
