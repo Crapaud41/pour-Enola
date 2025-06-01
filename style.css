@@ -69,7 +69,7 @@ body.dark-mode .page-blanche {
 .page-blanche {
   background-color: #fdf6e3;
   color: black;
-  padding: 50px 30px;
+  padding: 40px 30px;
   border-radius: 10px;
   max-width: 800px;
   width: 100%;
@@ -84,19 +84,21 @@ body.dark-mode .page-blanche {
   text-align: center;
   position: relative;
   border: 2px dashed rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* Titre manuscrit */
 .page-blanche h1 {
   font-family: 'Great Vibes', cursive;
   font-size: 36px;
-  margin-top: 0;
-  margin-bottom: 30px;
+  margin-top: 10px; /* légèrement remonté */
+  margin-bottom: 20px;
 }
 
 /* Texte animé */
 .texte-final {
-  margin-bottom: 40px;
+  margin-bottom: 100px; /* descend encore plus */
   font-size: 18px;
   max-width: 90%;
   display: flex;
@@ -152,14 +154,14 @@ body.dark-mode .page-blanche {
 .numero-page {
   font-size: 16px;
   color: #555;
-  padding-bottom: 10px;
+  padding-bottom: 20px; /* légèrement descendu */
   z-index: 1;
 }
 
-/* Flèches collées au bas de la fenêtre */
+/* Flèches dans les coins bas gauche/droite de la page blanche */
 .fleche-gauche,
 .fleche-droite {
-  position: fixed;
+  position: absolute;
   bottom: 10px;
   font-size: 28px;
   color: #555;
