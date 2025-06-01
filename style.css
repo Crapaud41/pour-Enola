@@ -98,7 +98,7 @@ body.dark-mode .page-blanche {
 
 /* Texte animé */
 .texte-final {
-  margin-bottom: 100px; /* descend encore plus */
+  margin-bottom: 20px; /* descend encore plus */
   font-size: 18px;
   max-width: 90%;
   display: flex;
