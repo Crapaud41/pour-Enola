@@ -6,7 +6,7 @@ html, body {
   color: white;
 }
 
-/* Fond animé */
+/* Fond animé pour toutes les pages */
 body {
   background: linear-gradient(-45deg, #1F75FE, #6CA6CD, #1F75FE);
   background-size: 400% 400%;
