@@ -7,17 +7,6 @@
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
-  <!-- Bouton mode nuit -->
-  <button id="toggle-dark">Mode Nuit</button>
-
-  <!-- Menu de navigation -->
-  <div class="menu-flottant">
-    <a href="page1.html">Accueil</a>
-    <a href="page2.html">Sommaire</a>
-    <a href="page3.html">Page 3</a>
-  </div>
-
-  <!-- Contenu principal -->
   <div class="container">
     <div class="page-blanche">
 
@@ -51,13 +40,10 @@
     </div>
   </div>
 
-  <!-- Barre de progression -->
-  <div class="progress-bar" id="progressBar"></div>
-
-  <!-- Scripts -->
+  <!-- Script pour effet de page tournée -->
   <script>
-    // Animation effet page tournée
     const links = document.querySelectorAll('.fleche-gauche, .fleche-droite');
+
     links.forEach(link => {
       link.addEventListener('click', function (e) {
         e.preventDefault();
@@ -67,18 +53,6 @@
           window.location.href = target;
         }, 600);
       });
-    });
-
-    // Mode nuit
-    document.getElementById('toggle-dark').addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
-
-    // Barre de progression
-    window.addEventListener('scroll', () => {
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scroll = (window.scrollY / docHeight) * 100;
-      document.getElementById('progressBar').style.width = scroll + '%';
     });
   </script>
 </body>
