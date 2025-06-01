@@ -6,7 +6,7 @@ html, body {
   color: white;
 }
 
-/* Fond animé pour toutes les pages */
+/* Fond animé */
 body {
   background: linear-gradient(-45deg, #1F75FE, #6CA6CD, #1F75FE);
   background-size: 400% 400%;
@@ -34,38 +34,13 @@ body.dark-mode {
   background: #121212;
   color: white;
 }
-
 body.dark-mode .page-blanche {
   background-color: #1e1e1e;
   color: #eee;
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Conteneur de couverture */
-.cover-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100dvh;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.cover {
-  height: auto;
-  max-height: 90dvh;
-  width: auto;
-  max-width: 95%;
-  border: 3px solid white;
-  border-radius: 8px;
-  transition: transform 1s ease-in-out;
-  transform-origin: left center;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
-  cursor: pointer;
-}
-
-/* Page blanche */
+/* Conteneur principal */
 .page-blanche {
   background-color: #fdf6e3;
   color: black;
@@ -88,17 +63,31 @@ body.dark-mode .page-blanche {
   overflow: hidden;
 }
 
-/* Titre manuscrit */
-.page-blanche h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 36px;
-  margin-top: 10px; /* légèrement remonté */
+/* Titre */
+.titre-classique {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
-/* Texte animé */
+/* Présentation pleine hauteur */
+.presentation-fullscreen {
+  height: 100dvh;
+  overflow: hidden;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Texte final en deux colonnes */
 .texte-final {
-  margin-bottom: 35px; /* descend encore plus */
+  margin-bottom: 35px;
   font-size: 18px;
   max-width: 90%;
   display: flex;
@@ -119,19 +108,7 @@ body.dark-mode .page-blanche {
   }
 }
 
-/* Sommaire */
-.page-sommaire::before {
-  content: '';
-  position: absolute;
-  top: 110px;
-  bottom: 100px;
-  left: 50%;
-  width: 1px;
-  background-color: rgba(0, 0, 0, 0.2);
-  transform: translateX(-50%);
-  z-index: 0;
-}
-
+/* Colonne gauche/droite */
 .sommaire-gauche,
 .sommaire-droite {
   flex: 1;
@@ -150,15 +127,28 @@ body.dark-mode .page-blanche {
   margin-left: 10px;
 }
 
+/* Trait vertical au centre */
+.page-sommaire::before {
+  content: '';
+  position: absolute;
+  top: 110px;
+  bottom: 100px;
+  left: 50%;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
 /* Numéro de page */
 .numero-page {
   font-size: 16px;
   color: #555;
-  padding-bottom: 20px; /* légèrement descendu */
+  padding-bottom: 20px;
   z-index: 1;
 }
 
-/* Flèches dans les coins bas gauche/droite de la page blanche */
+/* Flèches */
 .fleche-gauche,
 .fleche-droite {
   position: absolute;
@@ -173,20 +163,15 @@ body.dark-mode .page-blanche {
   z-index: 10;
 }
 
-.fleche-gauche {
-  left: 20px;
-}
-
-.fleche-droite {
-  right: 20px;
-}
+.fleche-gauche { left: 20px; }
+.fleche-droite { right: 20px; }
 
 .fleche-gauche:hover,
 .fleche-droite:hover {
   background: rgba(255, 255, 255, 0.8);
 }
 
-/* Transition page tournée */
+/* Transition de page */
 .page-transition {
   animation: tourner-page 0.6s ease forwards;
 }
@@ -215,7 +200,7 @@ body.dark-mode .page-blanche {
   z-index: 999;
 }
 
-/* Menu de navigation */
+/* Menu flottant */
 .menu-flottant {
   position: fixed;
   top: 20px;
@@ -239,7 +224,7 @@ body.dark-mode .page-blanche {
   text-decoration: underline;
 }
 
-/* Barre de progression */
+/* Barre de progression (si activée un jour) */
 .progress-bar {
   position: fixed;
   bottom: 0;
@@ -248,35 +233,4 @@ body.dark-mode .page-blanche {
   background: #fff;
   z-index: 999;
   transition: width 0.3s ease;
-}
-
-/* Titre Arial gras */
-.titre-classique {
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  font-size: 32px;
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
-/* Présentation en plein écran, sans scroll */
-.presentation-fullscreen {
-  height: 100dvh;
-  overflow: hidden;
-  padding: 40px 20px;
-  box-sizing: border-box;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-
-/* ✅ Texte de présentation (corrigé pour descendre juste au-dessus de "Page 1") */
-.page-blanche p {
-  font-size: 16px;
-  max-width: 700px;
-  text-align: center;
-  margin-top: 80px;
-  margin-bottom: 150px;
 }
