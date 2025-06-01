@@ -3,91 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chapitre 2</title>
+  <title>Sommaire</title>
   <link rel="stylesheet" href="../style.css" />
 </head>
-<body style="overflow: hidden;">
-  <button id="toggle-dark">Mode nuit</button>
-
-  <div class="menu-flottant">
-    <a href="../index.html">Accueil</a>
-    <a href="page1.html">Page 1</a>
-    <a href="page48.html">Dernière page</a>
-  </div>
-
-  <div class="progress-bar" id="progress-bar"></div>
-
+<body>
   <div class="container">
-    <div class="page-blanche page-sommaire">
-      <h1>Sommaire</h1>
+    <div class="page-blanche page-sommaire presentation-fullscreen" style="padding: 20px 30px; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: space-between;">
 
+      <!-- Titre -->
+      <h1 class="titre-classique" style="margin-top: 20px;">Sommaire</h1>
+
+      <!-- Colonnes de sommaire -->
       <div class="texte-final">
-        <!-- Colonne gauche -->
         <div class="sommaire-gauche">
-          <p><span>Portrait d'Enola</span><span class="page-num">Page 3</span></p>
-          <p><span>Sa lumière</span><span class="page-num">Page 4</span></p>
-          <p><span>Ce qu’elle m’apporte</span><span class="page-num">Page 5</span></p>
-          <p><span>Nos souvenirs</span><span class="page-num">Page 6</span></p>
-          <p><span>Ses valeurs</span><span class="page-num">Page 7</span></p>
-          <p><span>Mon admiration</span><span class="page-num">Page 8</span></p>
-          <p><span>Sa force</span><span class="page-num">Page 9</span></p>
-          <p><span>Notre lien</span><span class="page-num">Page 10</span></p>
-          <p><span>Sa douceur</span><span class="page-num">Page 11</span></p>
-          <p><span>Ma reconnaissance</span><span class="page-num">Page 12</span></p>
-          <p><span>Lettre à Enola</span><span class="page-num">Page 13</span></p>
-          <p><span>Page 14</span></p>
-          <p><span>Page 15</span></p>
-          <p><span>Page 16</span></p>
-          <p><span>Page 17</span></p>
-          <p><span>Page 18</span></p>
-          <p><span>Page 19</span></p>
-          <p><span>Page 20</span></p>
-          <p><span>Page 21</span></p>
-          <p><span>Page 22</span></p>
-          <p><span>Page 23</span></p>
-          <p><span>Page 24</span></p>
-          <p><span>Page 25</span></p>
+          <p><span>Chapitre 1</span><span class="page-num">Page 3</span></p>
+          <p><span>Chapitre 2</span><span class="page-num">Page 5</span></p>
+          <p><span>Chapitre 3</span><span class="page-num">Page 7</span></p>
+          <p><span>Chapitre 4</span><span class="page-num">Page 9</span></p>
+          <p><span>Chapitre 5</span><span class="page-num">Page 11</span></p>
         </div>
-
-        <!-- Colonne droite -->
         <div class="sommaire-droite">
-          <p><span>Page 26</span></p>
-          <p><span>Page 27</span></p>
-          <p><span>Page 28</span></p>
-          <p><span>Page 29</span></p>
-          <p><span>Page 30</span></p>
-          <p><span>Page 31</span></p>
-          <p><span>Page 32</span></p>
-          <p><span>Page 33</span></p>
-          <p><span>Page 34</span></p>
-          <p><span>Page 35</span></p>
-          <p><span>Page 36</span></p>
-          <p><span>Page 37</span></p>
-          <p><span>Page 38</span></p>
-          <p><span>Page 39</span></p>
-          <p><span>Page 40</span></p>
-          <p><span>Page 41</span></p>
-          <p><span>Page 42</span></p>
-          <p><span>Page 43</span></p>
-          <p><span>Page 44</span></p>
-          <p><span>Page 45</span></p>
-          <p><span>Page 46</span></p>
-          <p><span>Page 47</span></p>
-          <p><span>Sans titre</span><span class="page-num">Page 48</span></p>
+          <p><span>Chapitre 6</span><span class="page-num">Page 13</span></p>
+          <p><span>Chapitre 7</span><span class="page-num">Page 15</span></p>
+          <p><span>Chapitre 8</span><span class="page-num">Page 17</span></p>
+          <p><span>Chapitre 9</span><span class="page-num">Page 19</span></p>
+          <p><span>Chapitre 10</span><span class="page-num">Page 21</span></p>
         </div>
       </div>
 
-      <div class="numero-page">2</div>
+      <!-- Numéro de page -->
+      <div class="numero-page" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
+        Page 2
+      </div>
 
-      <a href="page1.html" class="fleche-gauche">&#8592;</a>
-      <a href="page3.html" class="fleche-droite">&#8594;</a>
+      <!-- Flèches -->
+      <a href="page1.html" class="fleche-gauche"
+        style="position: absolute; bottom: 20px; left: 20px;">←</a>
+      <a href="page3.html" class="fleche-droite"
+        style="position: absolute; bottom: 20px; right: 20px;">→</a>
     </div>
   </div>
 
+  <!-- Script de transition -->
   <script>
-    // Effet de transition entre les pages
-    const links = document.querySelectorAll('.fleche-gauche, .fleche-droite');
-    links.forEach(link => {
+    document.querySelectorAll('.fleche-gauche, .fleche-droite').forEach(link => {
       link.addEventListener('click', function (e) {
         e.preventDefault();
         const target = this.href;
@@ -96,20 +55,6 @@
           window.location.href = target;
         }, 600);
       });
-    });
-
-    // Barre de progression dynamique
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (scrollTop / docHeight) * 100;
-      document.getElementById('progress-bar').style.width = progress + '%';
-    });
-
-    // Mode nuit
-    const toggle = document.getElementById('toggle-dark');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
     });
   </script>
 </body>
