@@ -271,3 +271,12 @@ body.dark-mode .page-blanche {
   display: flex;
   flex-direction: column;
 }
+
+/* ✅ Texte de présentation (corrigé pour descendre juste au-dessus de "Page 1") */
+.page-blanche p {
+  font-size: 16px;
+  max-width: 700px;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
