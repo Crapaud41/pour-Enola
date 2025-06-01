@@ -2,73 +2,49 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Présentation</title>
+  <title>Page 1 - Présentation</title>
   <link rel="stylesheet" href="../style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #1F75FE, #358CFE, #1F75FE);
+      background-size: 400% 400%;
+      animation: gradientShift 20s ease infinite;
+      min-height: 130vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 60px;
+      font-size: 2.5em;
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .photo {
+      margin-top: 40px;
+      max-width: 80%;
+      height: auto;
+      border: 3px solid white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      border-radius: 10px;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
 </head>
 <body>
-  <!-- Bouton mode nuit -->
-  <button id="toggle-dark" aria-label="Activer/désactiver le mode nuit">🌙</button>
-
-  <!-- Menu de navigation -->
-  <div class="menu-flottant">
-    <a href="../index.html">Accueil</a>
-    <a href="page2.html">Sommaire</a>
-    <a href="page3.html">Page 3</a>
-  </div>
-
-  <!-- Contenu principal -->
-  <div class="container">
-    <div class="page-blanche">
-
-      <!-- Titre -->
-      <h1>Présentation</h1>
-
-      <!-- Image d'Enola -->
-      <img
-        src="../photo.jpg"
-        alt="Photo d'Enola"
-        style="width: 400px; height: auto; border-radius: 10px; margin: 40px 0 80px;"
-      />
-
-      <!-- Texte -->
-      <div class="texte-final">
-        <p>
-          Il y a des rencontres qui changent une vie. Enola en fait partie.
-          Depuis 7 ans, elle est mon pilier, mon ange gardien, celle qui
-          m’a tendu la main quand j’en avais le plus besoin. Chaque mot ici
-          est une trace de l’amour que je ressens pour mon Enola.
-        </p>
-      </div>
-
-      <!-- Numéro de page -->
-      <div class="numero-page">Page 1</div>
-
-      <!-- Flèches de navigation -->
-      <a href="../index.html" class="fleche-gauche">←</a>
-      <a href="page2.html" class="fleche-droite">→</a>
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script>
-    // Transition douce entre les pages
-    document.querySelectorAll('.fleche-gauche, .fleche-droite').forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = this.href;
-        document.querySelector('.page-blanche').classList.add('page-transition');
-        setTimeout(() => {
-          window.location.href = target;
-        }, 600);
-      });
-    });
-
-    // Mode nuit
-    document.getElementById('toggle-dark').addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
-  </script>
+  <h1>Présentation</h1>
+  <img src="../photo.jpg" alt="Photo" class="photo" />
 </body>
 </html>
