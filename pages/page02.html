@@ -2,11 +2,12 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sommaire</title>
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
+  <button id="toggle-dark">Mode nuit</button>
   <div class="container">
     <div class="page-blanche page-sommaire">
 
@@ -14,8 +15,7 @@
 
       <div class="texte-final">
         <div class="sommaire-gauche">
-          <p><a href="page03.html">Portrait d'Enola</a><span class="page-num">Page 03</span></p>
-          <p><a href="page25.html">Les choses qui me font penser à Enola</a><span class="page-num">Page 25</span></p>
+          <p><a href="page03.html">A COMPLETER</a><span class="page-num">Page 03</span></p>
           <p><a href="page04.html">A COMPLETER</a><span class="page-num">Page 04</span></p>
           <p><a href="page05.html">A COMPLETER</a><span class="page-num">Page 05</span></p>
           <p><a href="page06.html">A COMPLETER</a><span class="page-num">Page 06</span></p>
@@ -37,10 +37,11 @@
           <p><a href="page22.html">A COMPLETER</a><span class="page-num">Page 22</span></p>
           <p><a href="page23.html">A COMPLETER</a><span class="page-num">Page 23</span></p>
           <p><a href="page24.html">A COMPLETER</a><span class="page-num">Page 24</span></p>
+          <p><a href="page25.html">A COMPLETER</a><span class="page-num">Page 25</span></p>
         </div>
 
         <div class="sommaire-droite">
-          <p><a href="page26.html">Si Enola était...</a><span class="page-num">Page 26</span></p>
+          <p><a href="page26.html">A COMPLETER</a><span class="page-num">Page 26</span></p>
           <p><a href="page27.html">A COMPLETER</a><span class="page-num">Page 27</span></p>
           <p><a href="page28.html">A COMPLETER</a><span class="page-num">Page 28</span></p>
           <p><a href="page29.html">A COMPLETER</a><span class="page-num">Page 29</span></p>
@@ -62,7 +63,7 @@
           <p><a href="page45.html">A COMPLETER</a><span class="page-num">Page 45</span></p>
           <p><a href="page46.html">A COMPLETER</a><span class="page-num">Page 46</span></p>
           <p><a href="page47.html">A COMPLETER</a><span class="page-num">Page 47</span></p>
-          <p><a href="page48.html">Conclusion</a><span class="page-num">Page 48</span></p>
+          <p><a href="page48.html">A COMPLETER</a><span class="page-num">Page 48</span></p>
         </div>
       </div>
 
@@ -84,6 +85,10 @@
           window.location.href = target;
         }, 600);
       });
+    });
+
+    document.getElementById('toggle-dark').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
     });
   </script>
 </body>
