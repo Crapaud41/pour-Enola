@@ -3,31 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Présentation</title>
+  <title>Sommaire</title>
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
   <div class="container">
-    <div class="page-blanche presentation-fullscreen">
+    <div class="page-blanche presentation-fullscreen page-sommaire">
 
-      <!-- Titre de la page en Arial Gras -->
-      <h1 class="titre-classique">Présentation</h1>
+      <!-- Titre du sommaire -->
+      <h1 class="titre-classique">Sommaire</h1>
 
-      <!-- Partie centrale vide -->
+      <!-- Contenu du sommaire -->
+      <div style="display: flex; gap: 60px; width: 100%; justify-content: space-between; margin-top: 40px; position: relative; z-index: 1;">
+        
+        <!-- Colonne de gauche -->
+        <div class="sommaire-gauche">
+          <p>A COMPLETER <span class="page-num">PAGE 03</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 04</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 05</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 06</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 07</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 08</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 09</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 10</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 11</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 12</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 13</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 14</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 15</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 16</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 17</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 18</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 19</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 20</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 21</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 22</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 23</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 24</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 25</span></p>
+        </div>
+
+        <!-- Colonne de droite -->
+        <div class="sommaire-droite">
+          <p>A COMPLETER <span class="page-num">PAGE 26</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 27</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 28</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 29</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 30</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 31</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 32</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 33</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 34</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 35</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 36</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 37</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 38</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 39</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 40</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 41</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 42</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 43</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 44</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 45</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 46</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 47</span></p>
+          <p>A COMPLETER <span class="page-num">PAGE 48</span></p>
+        </div>
+
+      </div>
 
       <!-- Numéro de page en bas centré -->
       <div class="numero-page">Page 02</div>
 
-      <!-- Flèche gauche -->
+      <!-- Flèches -->
       <a href="page01.html" class="fleche-gauche">←</a>
-
-      <!-- Flèche droite -->
       <a href="page03.html" class="fleche-droite">→</a>
 
     </div>
   </div>
 
-  <!-- Script de transition -->
+  <!-- Script transition -->
   <script>
     document.querySelectorAll('.fleche-gauche, .fleche-droite').forEach(link => {
       link.addEventListener('click', function (e) {
