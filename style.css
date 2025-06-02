@@ -74,7 +74,7 @@ body.dark-mode .page-blanche {
   max-width: 800px;
   width: 100%;
   height: 100%;
-  min-height: 100%; /* ✅ AJOUTÉ pour éviter l'effet écrasé */
+  min-height: 100%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   font-size: 18px;
   line-height: 1.6;
@@ -108,14 +108,14 @@ body.dark-mode .page-blanche {
 
 /* Texte animé */
 .texte-final {
-  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
   font-size: 18px;
   max-width: 90%;
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   z-index: 1;
-  gap: 40px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInText 1s ease-out forwards;
@@ -142,22 +142,29 @@ body.dark-mode .page-blanche {
   z-index: 0;
 }
 
-.sommaire-gauche,
-.sommaire-droite {
+.sommaire-gauche, .sommaire-droite {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   flex: 1;
   text-align: left;
 }
 
-.sommaire-gauche p,
-.sommaire-droite p {
+.sommaire-gauche p, .sommaire-droite p {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-.sommaire-gauche .page-num,
-.sommaire-droite .page-num {
-  margin-left: 10px;
+.page-num {
+  margin-left: 15px;
+  color: #000;
+}
+
+.trait-vertical {
+  width: 2px;
+  background-color: #000;
+  height: 100%;
 }
 
 /* Numéro de page */
