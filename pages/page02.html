@@ -3,20 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sommaire</title>
+  <title>Présentation</title>
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
   <div class="container">
-    <div class="page-blanche presentation-fullscreen page-sommaire">
+    <div class="page-blanche page-sommaire presentation-fullscreen">
+      
+      <!-- Titre -->
+      <h1 class="titre-classique">Présentation</h1>
 
-      <!-- Titre du sommaire -->
-      <h1 class="titre-classique">Sommaire</h1>
-
-      <!-- Contenu du sommaire -->
-      <div style="display: flex; gap: 60px; width: 100%; justify-content: space-between; margin-top: 40px; position: relative; z-index: 1;">
-        
-        <!-- Colonne de gauche -->
+      <!-- Sommaire en deux colonnes -->
+      <div class="texte-final">
         <div class="sommaire-gauche">
           <p>A COMPLETER <span class="page-num">PAGE 03</span></p>
           <p>A COMPLETER <span class="page-num">PAGE 04</span></p>
@@ -42,8 +40,6 @@
           <p>A COMPLETER <span class="page-num">PAGE 24</span></p>
           <p>A COMPLETER <span class="page-num">PAGE 25</span></p>
         </div>
-
-        <!-- Colonne de droite -->
         <div class="sommaire-droite">
           <p>A COMPLETER <span class="page-num">PAGE 26</span></p>
           <p>A COMPLETER <span class="page-num">PAGE 27</span></p>
@@ -69,20 +65,18 @@
           <p>A COMPLETER <span class="page-num">PAGE 47</span></p>
           <p>A COMPLETER <span class="page-num">PAGE 48</span></p>
         </div>
-
       </div>
 
-      <!-- Numéro de page en bas centré -->
+      <!-- Numéro de page -->
       <div class="numero-page">Page 02</div>
 
-      <!-- Flèches -->
+      <!-- Flèches navigation -->
       <a href="page01.html" class="fleche-gauche">←</a>
       <a href="page03.html" class="fleche-droite">→</a>
-
     </div>
   </div>
 
-  <!-- Script transition -->
+  <!-- Script de transition -->
   <script>
     document.querySelectorAll('.fleche-gauche, .fleche-droite').forEach(link => {
       link.addEventListener('click', function (e) {
