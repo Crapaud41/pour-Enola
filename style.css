@@ -96,13 +96,13 @@ body.dark-mode .page-blanche {
   margin-bottom: 20px;
 }
 
-/* Paragraphe principal sur page1.html */
+/* Paragraphe principal sur page01.html */
 .page-blanche p {
   font-size: 16px;
   max-width: 700px;
   text-align: center;
   margin-top: 80px;
-  margin-bottom: 150px; /* environ 1 cm au-dessus de "Page 1" */
+  margin-bottom: 150px; /* environ 1 cm au-dessus de "Page 01" */
 }
 
 /* Texte animé */
@@ -268,7 +268,7 @@ body.dark-mode .page-blanche {
   margin-bottom: 20px;
 }
 
-/* PLEIN ÉCRAN POUR PAGE1 — AJOUT ⚠️ */
+/* PLEIN ÉCRAN POUR PAGE01 — AJOUT ⚠️ */
 .presentation-fullscreen {
   height: 100dvh;
   overflow: hidden;
