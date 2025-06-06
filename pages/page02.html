@@ -27,7 +27,6 @@
       animation: fadeInItem 0.5s forwards;
     }
 
-    /* Animation en cascade */
     .portrait-grid p:nth-child(1) { animation-delay: 0.05s; }
     .portrait-grid p:nth-child(2) { animation-delay: 0.1s; }
     .portrait-grid p:nth-child(3) { animation-delay: 0.15s; }
@@ -114,7 +113,7 @@
       <p><strong>Ce qui la rend unique :</strong> Son visage</p>
       <p><strong>Peur / phobie :</strong> Bonne question</p>
       <p><strong>Ce qui la rend heureuse :</strong> Nos appels</p>
-      <p><strong>Emoji qui la représente :</strong> &#128153;</p>
+      <p><strong>Emoji qui la représente :</strong> 💙</p>
       <p><strong>Boisson préférée :</strong> Bonne question</p>
       <p><strong>Alcool préféré :</strong> Desperados</p>
       <p><strong>Fruit préféré :</strong> Bonne question</p>
@@ -128,5 +127,21 @@
     <a href="page01.html" class="fleche-gauche">&#8592;</a>
     <a href="page03.html" class="fleche-droite">&#8594;</a>
   </div>
+
+  <!-- Script de transition -->
+  <script>
+    document.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href && !href.startsWith('#') && !href.startsWith('javascript')) {
+          e.preventDefault();
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = href;
+          }, 600);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
