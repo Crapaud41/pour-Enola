@@ -348,6 +348,10 @@ body.dark-mode .page-blanche {
   margin: 0 auto;
   padding: 10px 20px;
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.4; /* réduit légèrement l'espace vertical */
   text-align: center;
+}
+
+.texte-lettre p {
+  margin: 6px 0; /* réduit l'espace entre paragraphes */
 }
