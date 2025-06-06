@@ -289,7 +289,7 @@ body.dark-mode .page-blanche {
   flex-direction: column;
 }
 
-/* Portrait d’Enola */
+/* Portrait classique */
 .portrait {
   max-width: 600px;
   margin: 0 auto;
@@ -300,4 +300,44 @@ body.dark-mode .page-blanche {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   color: #000;
+}
+
+/* Portrait en grille (page02.html améliorée) */
+.portrait-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  max-width: 700px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.portrait-grid p {
+  text-align: left;
+  margin: 0;
+  padding: 4px 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInItem 0.5s forwards;
+}
+
+@keyframes fadeInItem {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.portrait-grid strong {
+  font-family: 'Great Vibes', cursive;
+  font-size: 18px;
+  color: #1F75FE;
+}
+
+@media (min-width: 768px) {
+  .portrait-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
