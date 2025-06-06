@@ -5,42 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sommaire</title>
   <link rel="stylesheet" href="../style.css" />
-  <style>
-    .texte-final {
-      display: flex;
-      justify-content: space-between;
-      gap: 60px;
-      margin-top: 40px;
-      width: 100%;
-    }
-    .sommaire-gauche,
-    .sommaire-droite {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      flex: 1;
-    }
-    .sommaire-gauche p,
-    .sommaire-droite p {
-      display: flex;
-      justify-content: space-between;
-      margin: 0;
-    }
-    .page-num {
-      margin-left: 15px;
-      color: #000;
-    }
-    .page-sommaire::before {
-      content: '';
-      position: absolute;
-      top: 150px;
-      bottom: 100px;
-      left: 50%;
-      width: 1px;
-      background-color: rgba(0, 0, 0, 0.3);
-      transform: translateX(-50%);
-    }
-  </style>
 </head>
 <body>
   <button id="toggle-dark">Mode nuit</button>
@@ -50,59 +14,18 @@
       <h1 class="titre-classique">Sommaire</h1>
 
       <div class="texte-final">
+        <!-- Colonne gauche -->
         <div class="sommaire-gauche">
-          <!-- Gauche: Pages 03 à 25 -->
-          <!-- Généré dynamiquement -->
-          <!-- début gauche -->
-          
-          <!-- insérer dynamiquement -->
-          <!-- gauche -->
-          <!-- droite -->
-          <!-- Remplissage automatique 03–25 -->
-          <!-- début gauche-->
-          <!-- lignes générées -->
-          <!-- fin gauche -->
-          <!-- On va les insérer ci-dessous -->
-          
-          <script>
-            const gauche = document.currentScript.parentElement;
-            for (let i = 3; i <= 25; i++) {
-              const p = document.createElement('p');
-              const a = document.createElement('a');
-              a.href = `page${String(i).padStart(2, '0')}.html`;
-              a.textContent = 'A COMPLETER';
-              const span = document.createElement('span');
-              span.className = 'page-num';
-              span.textContent = `Page ${String(i).padStart(2, '0')}`;
-              p.appendChild(a);
-              p.appendChild(span);
-              gauche.appendChild(p);
-            }
-          </script>
+          <!-- Contenu à insérer ici -->
         </div>
 
+        <!-- Colonne droite -->
         <div class="sommaire-droite">
-          <!-- Remplissage automatique 26–48 -->
-          <script>
-            const droite = document.currentScript.parentElement;
-            for (let i = 26; i <= 48; i++) {
-              const p = document.createElement('p');
-              const a = document.createElement('a');
-              a.href = `page${String(i).padStart(2, '0')}.html`;
-              a.textContent = 'A COMPLETER';
-              const span = document.createElement('span');
-              span.className = 'page-num';
-              span.textContent = `Page ${String(i).padStart(2, '0')}`;
-              p.appendChild(a);
-              p.appendChild(span);
-              droite.appendChild(p);
-            }
-          </script>
+          <!-- Contenu à insérer ici -->
         </div>
       </div>
 
       <div class="numero-page">Page 02</div>
-
       <a href="page01.html" class="fleche-gauche">←</a>
       <a href="page03.html" class="fleche-droite">→</a>
 
