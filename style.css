@@ -288,3 +288,16 @@ body.dark-mode .page-blanche {
   display: flex;
   flex-direction: column;
 }
+
+/* Portrait d’Enola */
+.portrait {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  color: #000;
+}
