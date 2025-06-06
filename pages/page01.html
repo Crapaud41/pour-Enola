@@ -39,14 +39,16 @@
 
   <!-- Script de transition -->
   <script>
-    document.querySelectorAll('.fleche-gauche, .fleche-droite').forEach(link => {
+    document.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = this.href;
-        document.querySelector('.page-blanche').classList.add('page-transition');
-        setTimeout(() => {
-          window.location.href = target;
-        }, 600);
+        const href = this.getAttribute('href');
+        if (href && !href.startsWith('#') && !href.startsWith('javascript')) {
+          e.preventDefault();
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = href;
+          }, 600);
+        }
       });
     });
   </script>
