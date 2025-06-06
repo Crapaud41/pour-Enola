@@ -3,50 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sommaire</title>
+  <title>Page 02</title>
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
-  <button id="toggle-dark">Mode nuit</button>
-  <div class="container">
-    <div class="page-blanche page-sommaire">
-
-      <h1 class="titre-classique">Sommaire</h1>
-
-      <div class="texte-final">
-        <!-- Colonne gauche -->
-        <div class="sommaire-gauche">
-          <!-- Contenu à insérer ici -->
-        </div>
-
-        <!-- Colonne droite -->
-        <div class="sommaire-droite">
-          <!-- Contenu à insérer ici -->
-        </div>
-      </div>
-
-      <div class="numero-page">Page 02</div>
-      <a href="page01.html" class="fleche-gauche">←</a>
-      <a href="page03.html" class="fleche-droite">→</a>
-
-    </div>
-  </div>
-
-  <script>
-    document.querySelectorAll('.fleche-gauche, .fleche-droite').forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = this.href;
-        document.querySelector('.page-blanche').classList.add('page-transition');
-        setTimeout(() => {
-          window.location.href = target;
-        }, 600);
-      });
-    });
-
-    document.getElementById('toggle-dark').addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
-  </script>
 </body>
 </html>
