@@ -3,7 +3,7 @@ html, body {
   overflow: hidden;
   margin: 0;
   font-family: 'Georgia', serif;
-  color: white;
+  color: #222;
 }
 
 /* Fond animé pour toutes les pages + transition de fondu */
